@@ -1,0 +1,287 @@
+// Page: Select Your Plan
+.page-select-your-plan {
+
+	// Boxes (Variable Height Boxes centered per Row, stacked in mobile)
+	.flexbox {
+		&, & > .row {position:relative; width:100%; display:flex; flex-direction:row; justify-content:space-between; align-items:stretch;
+			.box {position:relative; display:block;}
+		}
+		& {flex-wrap:wrap;}
+		& > .row {flex-wrap:nowrap;
+			&:last-of-type {margin-bottom:0px!important;}
+		}
+
+		@include breakpoint('<=bp_768') {
+			&, & > .row {flex-direction:column; justify-content:flex-start; align-items:flex-start;
+				.box {width:100%; align-self:flex-start;}
+			}
+			& > .row:last-of-type > .box:last-of-type,
+			& > .box:last-of-type {margin-bottom:0px!important;}
+		}
+	}
+
+	// Flexbox Columns (Even Height Columns, stacked in mobile)
+	.flexcolumn {
+		&, & > .container {position:relative; width:100%; display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-between; align-items:stretch;}
+		.column {position:relative; display:block;}
+		@include breakpoint('<=bp_768') {
+			&, & > .container {flex-direction:column; justify-content:flex-start; align-items:flex-start;
+				.column {width:100%;}
+			}
+		}
+	}
+
+	// Header: Lower Background Color Override
+	header {
+		.lower {background-color:#fff!important;}
+		.container {
+			.logo {
+				@include breakpoint('>=bp_768') {
+					width: 225px;
+				}
+				img {
+					width: 175px;
+					@include breakpoint('>=bp_768') {
+						width: 225px;
+					}
+				}
+			}
+		}
+	}
+
+	// Main CTA
+	#mainCTA {
+		& {background-color:#f4f4f4;}
+		.headline h1 {@include font('Montserrat','Regular'); color:#333; text-transform:uppercase; text-align:center;}
+		.flexbox {
+			.box {position:relative; background-color:#fff; box-shadow: 0px 3px 11px 1px rgba(176,176,176,0.5); box-sizing:border-box;
+				&:nth-of-type(1) {
+					.productImage {background-image:url('images/single-box-HEMP.png');}
+				}
+				&:nth-of-type(2) {
+					&:before {content:""; position:absolute; background:url('images/shop-ribbon-50-off.png') top right no-repeat; background-size:100% 100%; width:150px; height:200px; top:-13px; right:-10px;}
+					.productImage {background-image:url('images/single-box-HEMP.png');}
+				}
+				* {@include center-horizontal(); text-align:center;}
+				h2 {@include font('Montserrat','Light'); color:#000; text-transform:uppercase; text-align:center;}
+				.priceGroup {
+					.price {@include font('Montserrat','Regular'); color:#121313; text-align:center;
+						span {display:inline-block; @include font('Montserrat','Light'); color: #DE3618;}
+					}
+					.supply {@include font('Montserrat','Light'); color:#000;}
+					.shipping {display:inline-block; @include font('Montserrat','Medium'); color:#0f1011; border-top:1px solid #000;}
+					hr {border:0px; height:1px; background:#000;}
+				}
+				.giftGroup {
+					.gift {@include font('Montserrat','Medium'); color:#589a12;}
+					.check {@include font('Montserrat','Light'); color:#000;
+						span {display:inline-block; font-weight:bold;}
+					}
+				}
+				.imageGroup {
+					img {@include center-horizontal();}
+				}
+				.noteGroup {@include center-horizontal();
+					.value {@include font('Montserrat','Regular'); color:#100f0f; border-bottom:1px solid #000;}
+					.note {@include font('Montserrat','Light'); color:#000;}
+				}
+				.button {background-color:#fb9a24; text-decoration:none;
+					&:hover {background-color:#DD821F;}
+					span {@include font('Montserrat','SemiBold'); color:#fff; text-transform:uppercase;}
+				}
+			}
+		}
+		@include breakpoint('bp_1280') {
+			.flexbox .box {width:520px;
+				.noteGroup .value {@include font-size(26px);}
+			}
+		}
+		@include breakpoint('bp_1024') {
+			.flexbox .box {width:460px;
+				.noteGroup .value {@include font-size(24px);}
+			}
+		}
+		@include breakpoint('>=bp_1024') {
+			.headline h1 {@include font-size(48px); margin:80px auto 50px;}
+			.flexbox {margin-bottom:75px;
+				.box {height:800px; margin:15px 15px 0; padding:60px 0 40px;
+					h2 {@include font-size(32px); letter-spacing:-0.02em; margin-bottom:20px;}
+					.priceGroup {height:130px;
+						.price {@include font-size(50px); margin-bottom:5px;
+							span {@include font-size(28px);}
+						}
+						.supply {@include font-size(18px);}
+						.shipping {@include font-size(26px); padding-top:10px; margin-top:10px;}
+					}
+					.giftGroup {
+						.gift {@include font-size(24px); margin-bottom:5px;}
+						.check {@include font-size(24px);}
+					}
+					.noteGroup {width:85%; height:100px;
+						.value {padding-bottom:10px; margin-bottom:10px;}
+						.note {@include font-size(18px,24px);}
+					}
+					.button {width:240px; height:60px;
+						span {@include font-size(20px,60px); }
+					}
+				}
+			}
+		}
+		@include breakpoint('bp_768') {
+			.headline h1 {@include font-size(48px); margin:60px auto 40px;}
+			.flexbox {margin-bottom:40px;
+				.box {display:block; width:500px; margin:0 auto; padding:60px 0 40px;
+					&:nth-of-type(1){order:2;}
+					&:nth-of-type(2){order:1; margin-top:15px; margin-bottom:40px!important;}
+					h2 {@include font-size(32px); letter-spacing:-0.02em; margin-bottom:20px;}
+					.priceGroup {margin-bottom:40px;
+						.price {@include font-size(50px); margin-bottom:5px;
+							span {@include font-size(28px);}
+						}
+						.supply {@include font-size(18px);}
+						.shipping {@include font-size(26px); padding-top:10px; margin-top:10px;}
+					}
+					.giftGroup {
+						.gift {@include font-size(24px); margin-bottom:5px;}
+						.check {@include font-size(24px);}
+					}
+					.noteGroup {width:85%;
+						.value {@include font-size(26px); letter-spacing:-0.02em; padding-bottom:15px; margin-bottom:15px;}
+						.note {@include font-size(18px,24px); margin-bottom:20px;}
+					}
+					.button {width:240px; height:60px;
+						span {@include font-size(20px,60px); }
+					}
+				}
+			}			
+		}
+		@include breakpoint('<=bp_540') {
+			.flexbox {
+				.box {display:block; width:90%; margin:0 auto; padding:40px 0px 20px;
+					&:nth-of-type(1){order:2;}
+					&:nth-of-type(2){order:1;}
+					&:nth-of-type(2){margin-top:10px; margin-bottom:40px!important;
+						&:before {width:100px; height:133px; top:-9px; right:-7px;}
+					}	
+				}
+			}
+		}
+		@include breakpoint('bp_540') {
+			.headline h1 {@include font-size(36px); margin:40px auto 20px;}
+			.flexbox {margin-bottom:40px;
+				.box {max-width:500px;
+					h2 {@include font-size(32px); letter-spacing:-0.02em; margin-bottom:20px;}
+					.priceGroup {margin-bottom:20px;
+						.price {@include font-size(48px);
+							span {@include font-size(24px);}
+						}
+						.supply {@include font-size(18px);}
+						.shipping {@include font-size(24px); padding-top:10px; margin-top:10px;}
+					}
+					&:nth-of-type(2) .priceGroup .price {margin-bottom:10px;}
+					.giftGroup {
+						.gift {@include font-size(22px); margin-bottom:5px;}
+						.check {@include font-size(22px); letter-spacing:-0.02em;}
+					}
+					.noteGroup {width:85%;
+						.value {@include font-size(24px); letter-spacing:-0.02em; padding-bottom:15px; margin-bottom:15px;}
+						.note {@include font-size(18px,24px); margin-bottom:15px;}
+					}
+					.button {width:240px; height:60px;
+						span {@include font-size(20px,60px); }
+					}
+				}
+			}		
+		}
+		@include breakpoint('bp_360') {
+			.headline h1 {@include font-size(28px); margin:40px auto 20px;}
+			.flexbox {margin-bottom:30px;
+				.box {
+					h2 {@include font-size(24px); letter-spacing:-0.02em; margin-bottom:20px;}
+					.priceGroup {margin-bottom:20px;
+						.price {@include font-size(40px);
+							span {@include font-size(22px);}
+						}
+						.supply {@include font-size(18px);}
+						.shipping {@include font-size(22px); padding-top:10px; margin-top:10px;}
+					}
+					&:nth-of-type(2) .priceGroup .price {margin-bottom:8px;}
+					.giftGroup {
+						.gift {@include font-size(20px); margin-bottom:5px;}
+						.check {@include font-size(18px); letter-spacing:-0.02em;}
+					}
+					.noteGroup {width:80%;
+						.value {@include font-size(22px); letter-spacing:-0.02em; padding-bottom:10px; margin-bottom:10px;}
+						.note {@include font-size(16px,20px); margin-bottom:15px;}
+					}
+					.button {width:240px; height:60px;
+						span {@include font-size(20px,60px); }
+					}
+				}
+			}		
+		}
+		
+		// Shop Button
+		.shop {
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 10px;
+
+			a {
+				.shop-btn {
+					@include font-size(20px);
+					font-weight: 700;
+					color: $gray;
+					text-transform: uppercase;
+					background: $gold-gradient;
+					margin: 0 auto 30px;
+					padding: 18px 0;
+				    width: 225px;
+				    height: 55px;
+					-webkit-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.25);
+				    -moz-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.25);
+				    box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.25);
+				    border: 1px solid rgba(211, 170, 81, 0.75);
+
+					&:hover {
+						background: #5e8927;
+						border-color: #5e8927;
+					}
+
+					&:active {
+						background: #5e8927;
+						border-color: #5e8927;
+					}
+				}
+			}
+		}
+	}
+	
+	// Lower Tagline
+	#lowerTagline {
+		& {background-color:$gray;}
+		h2 {@include font('Montserrat','Regular'); letter-spacing:-0.01em; color:#fff; text-transform:uppercase; text-align:center;  @include center-vertical();}
+
+		@media (min-width:1200px){
+			.container {height:160px;
+				h2 {@include font-size(38px);}
+			}
+		}
+		@media (min-width:768px) and (max-width:1199px){
+			.container {height:160px; max-width:650px;
+				h2 {@include font-size(34px);}
+			}			
+		}
+		@include breakpoint('bp_540') {
+			.container {height:120px; max-width:450px;
+				h2 {@include font-size(28px);}
+			}			
+		}
+		@include breakpoint('bp_360') {
+			.container {height:100px; max-width:330px;
+				h2 {@include font-size(24px);}
+			}			
+		}		
+	}
+	
+}

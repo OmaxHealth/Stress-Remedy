@@ -1,0 +1,25 @@
+{
+  "name": "omaxhealth",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Grunt build scripts for OMaxHealth landing pages",
+  "author": "OMaxHealth <info@omaxhealth.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OmaxHealth"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.4.2",
+    "grunt": "^1.0.3",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "npm": "^6.4.1",
+    "time-grunt": "^2.0.0"
+  }
+}

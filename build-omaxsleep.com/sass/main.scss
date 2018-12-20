@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/**
+ * Theme Name: Phyto-Max Stress Remedy
+ * Author: Omax Health
+ * Author URI: https://omaxhealth.com
+ * Template: Phyto-Max Stress Remedy
+ * Version: 1.0.0
+ */
+
+ // SASS: Global Elements
+@import 
+	"global/_cssreset.scss",
+	"global/_breakpoints.scss",
+	"global/_mixins.scss",
+	"global/_flex-layout.scss";
+	
+// SASS: Build Configuration
+@import
+	"config/_config.scss",
+	"config/_images.scss";
+	
+// SASS: Page Layouts
+@import 
+	"layouts/_global-elements.scss",
+	"layouts/_page-home.scss",
+	"layouts/_page-select-your-plan.scss",
+	"layouts/_page-faq.scss",
+	"layouts/_page-contact-us.scss",
+	"layouts/_page-privacy-policy.scss",
+	"layouts/_page-terms-and-conditions.scss",
+	"layouts/_page-reviews.scss";

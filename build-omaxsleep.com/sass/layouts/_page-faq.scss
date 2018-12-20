@@ -1,0 +1,50 @@
+.page-faq {
+	main {
+		.container {
+			padding: 25px 15px;
+			text-align: center;
+	
+			@include breakpoint('>=bp_768') {
+				padding: 50px 30px;
+			}
+	
+			h1 {
+				margin-bottom: 24px;
+			}
+	
+			.accordion-header {
+					cursor: pointer;
+				    padding: 20px 25px;
+				    width: 100%;
+				    margin: 10px auto;
+				    text-align: left;
+				    background: $lightgray;
+				    color: $mediumgray;
+	
+				@include breakpoint('bp_360') {
+					width: 100%;
+				}
+	
+				div {	    	
+					@include font-size(16px,24px);
+					font-weight: 600;
+	
+					@include breakpoint('>=bp_768') {
+						@include font-size(18px,26px);
+					}
+				}
+			}
+	
+			.accordion-content {
+				display: none;
+				padding: 20px;
+				text-align: left;
+				underline {text-decoration:underline;}
+	
+				@include breakpoint('>=bp_768') {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

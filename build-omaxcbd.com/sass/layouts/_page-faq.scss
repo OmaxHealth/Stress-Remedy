@@ -1,47 +1,28 @@
-#faq-page {
-	.container {
-		padding: 25px 15px;
-		text-align: center;
-
-		@include breakpoint('>=bp_768') {
-			padding: 50px 30px;
-		}
-
-		h1 {
-			margin-bottom: 24px;
-		}
-
-		.accordion-header {
-				cursor: pointer;
-			    padding: 20px 25px;
-			    width: 100%;
-			    margin: 10px auto;
-			    text-align: left;
-			    background: $lightgray;
-			    color: $mediumgray;
-
-			@include breakpoint('bp_360') {
-				width: 100%;
+// Page: FAQs
+.page-faq {
+	main {
+		.container {text-align:center;
+			h1 {@include font('Montserrat','Bold'); color:$color-gold;}
+			.accordion-header {width:100%; margin:10px auto; padding:20px 25px; color:$color-black; background:$color-gray; 				cursor: pointer;
+				div {@include font('Montserrat','SemiBold'); text-align:left;}
 			}
-
-			div {	    	
-				@include font-size(16px,24px);
-				font-weight: 600;
-
-				@include breakpoint('>=bp_768') {
-					@include font-size(18px,26px);
-				}
+			.accordion-content {display:none; padding:20px; text-align:left; margin:0 auto;
+				& > * {@include font('Montserrat','Regular');}
+				underline {text-decoration:underline;}
 			}
 		}
-
-		.accordion-content {
-			display: none;
-			padding: 20px;
-			text-align: left;
-
-			@include breakpoint('>=bp_768') {
-				margin: 0 auto;
-			}
+		
+		@include breakpoint('>=bp_768'){
+			.container {padding:50px 30px;}
+			h1 {@include font-size(36px); margin-bottom:24px;}
+			.accordion-header div {@include font-size(18px,26px);}
+			.accordion-content p {@include font-size(20px,32px);}
+		}	
+		@include breakpoint('<=bp_540'){
+			.container {padding:25px 15px;}
+			h1 {@include font-size(26px); margin-bottom:24px;}
+			 .accordion-header div {@include font-size(16px,24px);}
+			 .accordion-content p {@include font-size(16px,22px);}
 		}
 	}
 }

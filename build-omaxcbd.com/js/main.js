@@ -55,6 +55,6 @@ function addWriteAReviewButton() {
 
 function showReviewForm(){
 	$('#write-rev-btn').click(function(){
-		$('.shortcode-reviews-form').toggle();
+		$('.shortcode-site-reviews-form').toggle();
 	});
 }

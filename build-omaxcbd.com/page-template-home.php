@@ -1,173 +1,243 @@
-<?php /* Template Name: Offer - Layout 2 */ ?>
+<?php /* Template Name: Home - Main Offer */ ?>
 <?php 
-	set_query_var('custom_body_class','page-offer-v2');
-	set_query_var('offer','main-v2'); 
+	set_query_var('custom_body_class','page-home');
 	get_template_part('block','header'); 
 ?>
 <?php the_post(); ?>
 
 <main>
-	<section id="banner">
-		<div class="top">
-			<div class="container">
-				<h1 class="headline">Stress Remedy</h1>
-				<hr>
-				<p class="subline">Sleep Better. Relieve Stress. <br>Relax Your Mind.</p>
-				<div class="row">
-					<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/hero-box-CBD-mobile.png" alt="60 Day Money Back Guarantee" class="mobile-box" />
-					<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/hero-box-CBD-desktop.png" alt="60 Day Money Back Guarantee" class="desktop-box" />
-				</div>
-				<?php /*
-				<div class="productGroup">
-					<div class="left">
-						<img src="<?php bloginfo('template_directory'); ?>/images/seal-money-back-guarantee.png" alt="Money Back Guarantee"/>
-					</div>
-					<div class="right">
-						<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/hero-box-HEMP.png" srcset="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/hero-box-HEMP@2x.png 2x" alt="Omax Phyto-Max Stress Remedy" />
-					</div>
-				</div>
-				*/ ?>
-			</div>
-		</div>
-		<div class="bottom">
-			<div class="container">
-				<div class="row">
-					<div class="left">
-						<h2 class="headline">Limited Time Only!</h2>
-						<h1 class="subline">Save <span>50%<span>*</span></span></h1>
-					</div>
-					<div class="right">
-						<div class="shop">
-							<a href="<?php bloginfo('url'); ?>/select-your-plan"><div class="shop-btn">Order Now</div></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="testimonials">
+	<section id="hero">
 		<div class="container">
-			<div class="testimonial">
-				<div class="quote-container">
-					<p>"Within two days, I saw improvement in my joint pain and overall mood!"</p>
-				</div>
-				<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/testimonial-1-hemp.jpg" alt=""/>
-				<p class="name">Jessica S.</p>
-				<p class="title">Singer (Former Pussycat Doll)</p>
+			<div class="intro">
+				<h1>Sleep better with<br/>the science of CBD</h1>
+				<ul class="checkmark">
+					<li>Calm your mind naturally</li>
+					<li>Sleep soundly all night</li>
+					<li>Awake refreshed & alert</li>
+				</ul>
 			</div>
-			<div class="testimonial">
-				<div class="quote-container">
-					<p>"I sleep better and have more energy throughout the day."</p>
+			<a class="flexcolumn" href="<?php bloginfo('url'); ?>/select-your-plan/">
+				<div class="column left">
+					<div class="cta">
+						<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/home/hero-risk-free.png" alt="Risk Free TV Offer" />
+						<div class="ln1">Free Shipping!</div>
+						<div class="button red"><span>Order Now</span></div>						
+					</div>
 				</div>
-				<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/testimonial-2.jpg" alt=""/>
-				<p class="name">Brandon H.</p>
-				<p class="title">Professional Athlete</p>
-			</div>
-			<div class="testimonial">
-				<div class="quote-container">
-					<p>"I felt it right away! I'm calmer, more rested, alert & focused!"</p>
+				<div class="column right">
+					<picture class="product">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-CBD.png, <?php bloginfo('template_directory'); ?>/images/home/single-box-CBD@2x.png 2x" media="(min-width: 768px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-CBD.png" media="(max-width: 767px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-CBD.png" alt="Omax Sleep & Stress Remedy">
+					</picture>
 				</div>
-				<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/testimonial-3.jpg" alt=""/>
-				<p class="name">Laura B.</p>
-				<p class="title">Grandmother</p>
+			</a>
+
+		</div>
+	</section>
+	
+	<section id="icons">
+		<div class="container">
+			<div class="flexbox">
+				<div class="box">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/icon-box1.svg" alt="icon"/>
+					<span>Full Spectrum</span>
+				</div>
+				<div class="box">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/icon-box2.svg" alt="icon"/>
+					<span>3-Night Guarantee</span>
+				</div>
+				<div class="box">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/icon-box3.svg" alt="icon"/>
+					<span>No Grogginess</span>
+				</div>
 			</div>
 		</div>
-		<div class="reviews">
-				<a href="<?php bloginfo('url'); ?>/reviews" class="scroll"><div class="reviews-btn">Read our reviews</div></a>
-			</div>
 	</section>
-
+	
+	<section id="reviews">
+		<div class="upper">
+			<div class="container">
+				<div class="flexcolumn">
+					<div class="column left">
+						<picture>
+							<source srcset="<?php bloginfo('template_directory'); ?>/images/home/reviews-photo-desktop.jpg" media="(min-width: 1024px)">
+							<source srcset="<?php bloginfo('template_directory'); ?>/images/home/reviews-photo-mobile.jpg" media="(max-width: 1023px)">
+							<img srcset="<?php bloginfo('template_directory'); ?>/images/home/reviews-photo-desktop.jpg" alt="Review Photo">
+						</picture>
+					</div>
+					<div class="column right">
+						<h3 class="title">Advanced Patent-Pending Formula</h3>
+						<p class="quote">This power trio of ingredients, combined with full-spectrum CBD is a game-changer in improving sleep quality.</p>
+						<p class="person">Evan DeMarco, Omax Researcher</p>
+					</div>
+				</div>
+				<div class="link">
+					<a class="more" href="<?php bloginfo('url'); ?>/reviews/">See More Reviews</a>
+				</div>
+			</div>
+		</div>
+		<div class="lower">
+			<div class="container">
+				<div class="flexbox">
+					<div class="box">
+						<img class="stars" src="<?php bloginfo('template_directory'); ?>/images/home/icon-stars.svg" alt="stars"/>
+						<h3>Love!</h3>
+						<p class="quote">I tried it for the first time last night and it’s going to be my new go to! Within minutes it had me feeling relaxed.</p>
+						<p class="person">Teena S.</p>
+					</div>
+					<div class="box">
+						<img class="stars" src="<?php bloginfo('template_directory'); ?>/images/home/icon-stars.svg" alt="stars"/>
+						<h3>Great Product</h3>
+						<p class="quote">I am new to CBD and was skeptical. I used to wake up every 2-3 hours, and now I stay asleep for much longer.</p>
+						<p class="person">Mandy P.</p>
+					</div>
+					<div class="box">
+						<img class="stars" src="<?php bloginfo('template_directory'); ?>/images/home/icon-stars.svg" alt="stars"/>
+						<h3>Relieved</h3>
+						<p class="quote">After the first hours of taking your CBD, I instantly started feeling more relieved…don’t go a day without it now!!!</p>
+						<p class="person">Tia M.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="sleep">
+		<div class="container">
+			<div class="headline">
+				<img class="sleep" src="<?php bloginfo('template_directory'); ?>/images/home/icon-circle-cbd.svg" alt="Full Spectrum CBD Blend"/>
+				<div class="ln1">Get your best</div>
+				<div class="ln2">night’s sleep with CBD!</div>
+			</div>
+			<div class="flexcolumn">
+				<div class="column left">
+					<h3>1 out of 3 adults suffer from insomnia.</h3>
+					<p>Lack of sleep can cause drowsiness, mood and memory challenges. Long term, sleep deprivation can cause serious health concerns.</p>
+				</div>
+				<div class="column right">
+					<ul class="moon">
+						<li>Relax your mind tonight</li>
+						<li>Get a full night’s sleep</li>
+						<li>Awake to happier days</li>
+					</ul>						
+				</div>
+			</div>
+		</div>
+	</section>
+	
 	<section id="ingredients">
 		<div class="container">
-			<h1 class="headline">Patent-Pending Formula,<br>
-			<span>Clinically Researched Ingredients</span></h1>
-			<hr>
-			<h3 class="subline">Omax Phyto-Max™ Stress Remedy delivers the ultimate power-trio of clinically researched ingredients to support mind and body wellness.</h3>
-			<div class="ingredients">
-				<div class="container">
-					<div class="ingredient">
-						<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/ingredients-hemp-oil.png" alt="Hemp Oil"/>
-						<h1 class="headline">Hemp Oil</h1>
-						<p>European sourced, phytocannabinoid rich hemp oil, derived from the stems and stalks of industrial hemp. CO2 extracted using pharmaceutical process, for therapeutic potency and purity. </p>
-					</div>
-					<div class="ingredient">
-						<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/ingredients-alphawave.png" alt="AlphaWave"/>
-						<h1 class="headline">AlphaWave&reg; <br> L-Theanine</h1>
-						<p>Highly purified amino acid found naturally in green tea leaves, is one of nature’s most effective natural relaxants: it’s clinically studied to stimulate the production of alpha waves in the brain.</p>
-					</div>
-					<div class="ingredient">
-						<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/ingredients-fish-oil.png" alt="Omega-3"/>
-						<h1 class="headline">ProResolv&trade; <br> Omega-3</h1>
-						<p>Patented blend of omega-3 fatty acids from anchovies and sardines, with a 4:1  EPA-to-DHA ratio, developed for optimal inflammatory response, while supporting joints, mood &amp; mind.</p>
-					</div>
+			<div class="headline">
+				<h2>Patent-pending Hemp CBD Fusion</h2>
+			</div>
+			<div class="flexbox">
+				<div class="box">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/ingredients-1.png" alt="ingredient"/>
+					<span>Full Spectrum CBD</span>
+				</div>
+				<div class="box">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/ingredients-2.png" alt="ingredient"/>
+					<span>Omega-3 DHA</span>
+				</div>
+				<div class="box">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/ingredients-3.png" alt="ingredient"/>
+					<span>L-Theanine</span>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<section class="testimonial-cta">
-		<img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/arrow.png" alt="Order Now"/>
-		<div class="shop">
-			<a href="<?php bloginfo('url'); ?>/select-your-plan" class="scroll"><div class="shop-btn">Order Now</div></a>
+	
+	<section id="stress">
+		<div class="upper">
+			<div class="container">
+				<div class="headline">
+					<div class="ln1">Vicious Cycle Of</div>
+					<div class="ln2">sleep-stress</div>
+					<p>When you don’t sleep well, your entire day suffers. Your patience is shot, you're moody or irritable, and everyone around you is affected. It’s time to stop the stress sleep cycle so you can sleep better tonight.</p>
+				</div>
+					<picture class="diagram">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/stress-diagram.png, <?php bloginfo('template_directory'); ?>/images/home/stress-diagram@2x.png 2x" media="(min-width: 768px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/stress-diagram.png" media="(max-width: 767px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/stress-diagram.png" alt="High Stress - Can't Shut Off - Can't Fall Asleep - TV Phone Use (Blue Light) - Poor Performance">
+					</picture>
+			</div>
+		</div>
+		<div class="lower">
+			<div class="container">
+				<p>Sleep and Stress Remedy with CBD helps you feel calm, relaxed, blissful, so you naturally find a deep restful sleep.</p>
+			</div>
 		</div>
 	</section>
-
-	<section id="comparison">
+	
+	<section id="guarantee">
 		<div class="container">
-			<h1 class="headline">The Difference is Clear</h1>
-		<hr>
-		<p class="subline">Both come from the Cannabis Sativa plant. We extract the THC, leaving only therapeutic full-spectrum hemp.</p>
-		</div>
-		<div class="comparison-table">
-			<table>
-			<tbody>
-				<tr>
-				<th class="gold">HEMP</th>
-				<th class="green">MARIJUANA</th>
-				</tr>
-				<tr>
-				<td><i class="fa fa-check gold" aria-hidden="true"></i> Non-psychoactive</td>
-				<td><i class="fa fa-check green" aria-hidden="true"></i> Psychoactive</td>
-				</tr>
-				<tr>
-				<td><i class="fa fa-check gold" aria-hidden="true"></i> No-high</td>
-				<td><i class="fa fa-check green" aria-hidden="true"></i> Gets you high</td>
-				</tr>
-				<tr>
-				<td><span class="gold">Effects:</span> General health and wellness from a balanced system</td>
-				<td><span class="green">Effects:</span> Euphoria, hallucinogenic, short-term memory impairment</td>
-				</tr>
-			</tbody>
-		</table>
-		</div>
-	</section>
-
-	<section id="product-info">
-		<div class="accordion">
-			<div class="accordion-header">Ingredient Panel<i class="fa fa-angle-down"></i></div>
-			<div class="accordion-content"><img src="<?php bloginfo('template_directory'); ?>/images/main-offer-v2/shop-ingredients.jpg" alt="Ingredient Panel" /></div>
-			<div class="accordion-header">Directions<i class="fa fa-angle-down"></i></div>
-			<div class="accordion-content">As a dietary supplement for adults over 18, take two softgels per day in the morning or afternoon with food.</div>
-		</div>
-	</section>
-
-	<section id="pros">
-		<div class="pro"></div>
-		<div class="pro"></div>
-		<div class="pro"></div>
-	</section>
-
-	<section id="lower-cta">
-		<div class="container">
-				<h2 class="headline">Limited Time Only!</h2>
-				<h1 class="subline">Save <span>50%<span>*</span></span></h1>
-				<img class="box" src="<?php bloginfo('template_directory'); ?>/images/single-box-HEMP.png" srcset="<?php bloginfo('template_directory'); ?>/images/single-box-HEMP@2x.png 2x" alt="Omax Phyto-Max Stress Remedy"/>
-				<div class="shop">
-					<a href="<?php bloginfo('url'); ?>/select-your-plan" class="scroll"><div class="shop-btn">Order Now</div></a>
+			<div class="flexcolumn">
+				<div class="column left">
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/icon-guarantee.svg" alt="guarantee"/>
+				</div>
+				<div class="column right">
+					<h2>3-night risk-free <br/>sleep guarantee</h2>
+					<p>If you don't sleep better after 3 nights, simply return for a refund.</p>
 				</div>
 			</div>
+		</div>	
 	</section>
+	
+	<section id="benefits">
+		<div class="container">
+			<div class="flexbox">
+				<div class="box">
+					<picture></picture>
+					<div class="inner">
+						<h3>Relieve <br/>Stress</h3>
+					</div>
+				</div>
+				<div class="box">
+					<picture></picture>
+					<div class="inner">
+						<h3>Relax Your <br/>Mind</h3>
+					</div>
+				</div>
+				<div class="box">
+					<picture></picture>
+					<div class="inner">
+						<h3>Sleep <br/>Better</h3>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+	
+	<section id="lowerCTA">
+		<div class="container">
+			<div class="flexcolumn">
+				<div class="column left">
+					<picture class="product">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-CBD-with-seal.png, <?php bloginfo('template_directory'); ?>/images/home/single-box-CBD-with-seal@2x.png 2x" media="(min-width: 768px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-CBD-with-seal.png" media="(max-width: 767px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-CBD-with-seal.png" alt="Omax Sleep & Stress Remedy">
+					</picture>
+				</div>
+				<div class="column right">
+					<ul class="checkmark">
+						<li>Sleep better with CBD</li>
+						<li>Relax your mind naturally</li>
+						<li>Reduce stress & anxiousness</li>
+						<li>Wake up refreshed</li>
+					</ul>
+					<div class="cta">
+						<div class="price">
+							<span class="pt1">$</span><span class="pt2">30</span><span class="pt3">00</span>
+						</div>
+						<div class="ln1">($59<span>95</span> value)</div>
+						<div class="ln2">Limited Time: Free Shipping!</div>
+						<a class="button red" href="<?php bloginfo('url'); ?>/select-your-plan/"><span>Order Now</span></a>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
 </main>
 
 <?php get_template_part('block','footer'); ?>

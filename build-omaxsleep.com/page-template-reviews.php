@@ -1,13 +1,15 @@
 <?php get_template_part('block','header'); ?>
+<?php the_post(); ?>
 
 <main>
 	<section id="reviews">
 		<div class="container">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-			the_content();
-			endwhile; endif; ?>
+			<h1 class="headline">What Our Customers Are Saying</h1>
+			<hr/>
+			<div class='jdgm-widget jdgm-review-widget jdgm-outside-widget' data-product-title='Omax Sleep & Stress Remedy' data-id='1937655922758'></div>
+			
+		</div>
 	</section>
-	</div>
 </main>
 
 <?php get_template_part('block','footer'); ?>

@@ -4,7 +4,6 @@ var $ = jQuery;
 jQuery(document).ready(function($){	
 	
 	initMobileNav();
-	closeMobileNav();
 	initAccordion();
 	smoothScroll();
 	newsletterPlaceholder();
@@ -17,14 +16,13 @@ jQuery(document).ready(function($){
 // Global Function to control mobile navigation
 // ===================================================================
 function initMobileNav(){
-	$('#toggle-bars').click(function(){
-		$('.mobile-menu').slideDown();
-	});
-}
-
-function closeMobileNav(){
-	$('#close-btn').click(function(){
-		$('.mobile-menu').slideUp();
+	$('header nav.menu svg.hamburger').click(function(){
+		var navMobile = $(this).parent();
+		if (navMobile.hasClass('open')){
+			navMobile.removeClass('open');
+		} else {
+			navMobile.addClass('open');
+		}
 	});
 }
 
@@ -55,6 +53,6 @@ function addWriteAReviewButton() {
 
 function showReviewForm(){
 	$('#write-rev-btn').click(function(){
-		$('.shortcode-reviews-form').toggle();
+		$('.shortcode-site-reviews-form').toggle();
 	});
 }

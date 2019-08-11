@@ -98,7 +98,7 @@
 }
 
 // SASS: Sizing of element with background image, either default or resized proportionally based on WIDTH or manually setting WIDTH & HEIGHT
-// @include image-size($image,'100px,100px);
+// @include image-size($image,100px,100px);
 @mixin image-size($image,$width:null,$height:null){
 	@if ($width != null and $height == null) {
 		width:$width;

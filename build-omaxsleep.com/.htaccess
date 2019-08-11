@@ -1,8 +1,26 @@
 <IfModule mod_rewrite.c>
 Options +FollowSymLinks
 RewriteEngine On
+
+# ------------------------------------------------------------------------------
+# Bypasses WordPress index.php, forces /home
+# ------------------------------------------------------------------------------
+Redirect /index.php /home
+
+# ------------------------------------------------------------------------------
+# Removes trailing slash from URL
+# ------------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R]
+
+# ------------------------------------------------------------------------------
+# Points traffic to local WordPress simulator .build-index.php
+# ------------------------------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-zA-Z0-9-]+)$ index.php?page=$1
-RewriteRule ^([a-zA-Z0-9-]+)/$ index.php?page=$1
+RewriteRule ^(.*)$ .build-index.php?page=$1 [NC,L,QSA]
+
+
+#RewriteRule ^([a-zA-Z0-9-]+)$ _build-index.php?page=$1
+#RewriteRule ^([a-zA-Z0-9-]+)/$ _build-index.php?page=$1
 </IfModule>

@@ -1,0 +1,42 @@
+// Page: Legal Pages (Terms and Conditions, Privacy Policy)
+main#legal {	
+	h1 {@include font('Montserrat','Bold'); color:$color-gold; text-align:center; @include center-horizontal();}
+	h2 {@include font('Montserrat','SemiBold'); text-transform:uppercase;}
+	h3 {@include font('Montserrat','Medium');}
+	p, li {@include font('Montserrat','Regular');
+		strong {@include font('Montserrat','Medium');}
+	}
+	ul {margin-left:20px;
+		li {list-style-type:disc;}
+	}
+	ol {margin-left:20px;
+		li {list-style-type:decimal;}
+	}
+	a {@include font('Montserrat','Regular'); color:$color-gold; text-decoration:underline;}
+	
+	@include breakpoint('>=bp_768'){
+		h1 {margin-top:40px; margin-bottom:20px;}
+		h2 {margin:20px 0;}
+		h3 {@include font-size(16px);}
+		p, {@include font-size(16px,22px); margin-bottom:15px;}
+		ul, ol {margin-bottom:15px;
+			li {@include font-size(16px,22px); margin-bottom:5px;}
+		}
+	}
+	@include breakpoint('>=bp_1024'){
+		h1 {@include font-size(42px);}
+		h2 {@include font-size(20px);}
+	}
+	@include breakpoint('bp_768'){
+		h1 {@include font-size(32px);}
+		h2 {@include font-size(18px);}
+	}
+	@include breakpoint('<=bp_540'){
+		h1 {@include font-size(26px); margin-top:20px; margin-bottom:20px;}
+		h2 {@include font-size(16px); margin-bottom:10px;}
+		p, {@include font-size(14px,20px); margin-bottom:10px;}
+		ul, ol {margin-bottom:10px;
+			li {@include font-size(14px,20px); margin-bottom:5px;}
+		}
+	}	
+}

@@ -98,7 +98,7 @@
 }
 
 // SASS: Sizing of element with background image, either default or resized proportionally based on WIDTH or manually setting WIDTH & HEIGHT
-// @include image-size($image,'100px,100px);
+// @include image-size($image,100px,100px);
 @mixin image-size($image,$width:null,$height:null){
 	@if ($width != null and $height == null) {
 		width:$width;
@@ -130,12 +130,18 @@
 	background-image:url($image-folder + map-get($image,'file'));
 	background-repeat:no-repeat;
 	@if ($position != null) {
-		background-position:unquote($position);
+		@if (type-of($position) == string) {
+			$position: unquote($position)
+		}
+		background-position:$position;
 	} @else {
 		background-position:center center;
 	}
 	@if ($size != null) {
-		background-size:unquote($size);
+		@if (type-of($size) == string) {
+			$size: unquote($size)
+		}
+		background-size:$size;
 	} @else {
 		background-size:100% 100%;
 	}
@@ -166,12 +172,18 @@
 @mixin image-background-style($position:null,$size:null){
 	background-repeat:no-repeat;
 	@if ($position != null) {
-		background-position:unquote($position);
+		@if (type-of($position) == string) {
+			$position: unquote($position)
+		}
+		background-position:$position;
 	} @else {
 		background-position:center center;
 	}
 	@if ($size != null) {
-		background-size:unquote($size);
+		@if (type-of($size) == string) {
+			$size: unquote($size)
+		}
+		background-position:$size;
 	} @else {
 		background-size:100% 100%;
 	}

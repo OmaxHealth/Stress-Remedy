@@ -36,7 +36,8 @@ module.exports = function(grunt) {
 	  options: {
 	    map: true,
 	    processors: [
-	      require('autoprefixer')({browsers:['> 1%','last 2 versions'], cascade:false, remove:true})
+	      require('autoprefixer')({cascade:false, remove:true}),
+	      require('postcss-ordered-values')()
 	    ]
 	  },
 	  build: {

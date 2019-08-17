@@ -130,12 +130,18 @@
 	background-image:url($image-folder + map-get($image,'file'));
 	background-repeat:no-repeat;
 	@if ($position != null) {
-		background-position:unquote($position);
+		@if (type-of($position) == string) {
+			$position: unquote($position)
+		}
+		background-position:$position;
 	} @else {
 		background-position:center center;
 	}
 	@if ($size != null) {
-		background-size:unquote($size);
+		@if (type-of($size) == string) {
+			$size: unquote($size)
+		}
+		background-size:$size;
 	} @else {
 		background-size:100% 100%;
 	}
@@ -166,12 +172,18 @@
 @mixin image-background-style($position:null,$size:null){
 	background-repeat:no-repeat;
 	@if ($position != null) {
-		background-position:unquote($position);
+		@if (type-of($position) == string) {
+			$position: unquote($position)
+		}
+		background-position:$position;
 	} @else {
 		background-position:center center;
 	}
 	@if ($size != null) {
-		background-size:unquote($size);
+		@if (type-of($size) == string) {
+			$size: unquote($size)
+		}
+		background-position:$size;
 	} @else {
 		background-size:100% 100%;
 	}

@@ -43,6 +43,59 @@
 			}
 		}
 	}
+	
+	// Offer Lock-up
+	#offer {
+		.container {background-color:#f7f7f7;}
+		.flexcolumn {
+			.left {
+				h2 {@include font('Montserrat','Medium'); @include center-horizontal(); @include center-vertical(); text-align:center;
+					strong {@include font('Montserrat','Bold');}
+				}
+			}
+		}
+		
+		@include breakpoint('bp_1280'){
+			& {padding-top:50px;}
+			.flexcolumn {padding:40px;
+				.left {width:440px;
+					h2 {width:370px; @include font-size(20px,32px);}
+				}
+				.right {width:600px;}
+			}
+		}
+		@include breakpoint('bp_1024'){
+			& {padding-top:40px;}
+			.flexcolumn {padding:20px;
+				.left {width:400px;
+					h2 {width:370px; @include font-size(20px,32px);}
+				}
+				.right {width:580px;}
+			}
+		}
+		@include breakpoint('<=bp_768'){
+			.container {width:100%!important; padding:0px!important;}
+			.flexcolumn {flex-direction:row; justify-content:space-between; align-items:stretch;
+				.left {width:35%;}
+				.right {width:65%;}
+			}
+		}
+		@include breakpoint('bp_768'){
+			.flexcolumn {padding:20px;
+				.left h2 { @include font-size(20px,30px);}
+			}
+		}
+		@include breakpoint('bp_540'){		
+			.flexcolumn {padding:15px;
+				.left h2 { @include font-size(16px,22px);}
+			}
+		}
+		@include breakpoint('bp_360'){
+			.flexcolumn {padding:10px;
+				.left h2 { @include font-size(12px,14px);}
+			}
+		}
+	}
 		
 	// Main CTA
 	#mainCTA {

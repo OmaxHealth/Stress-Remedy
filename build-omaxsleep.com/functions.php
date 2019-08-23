@@ -43,9 +43,9 @@ function getGTM_ID(){
 
 // WordPress: Define Offer URLS for Buy Now button links
 function getOfferURL($offerID = NULL){
-	$offerURL[1] = "https://omaxsleep.com/cart/buybutton.php?id=-Tl9fmFRQUqOmow3ZSxJ7Q"; //39.95 subscription
-	$offerURL[2] = "https://omaxsleep.com/cart/buybutton.php?id=U013Z0tXR0CNNS0yAJw-7A"; //109.95 3-pack
-	$offerURL[3] = "https://omaxsleep.com/cart/buybutton.php?id=APMJWNSMok-oCXiiPOaA7w"; //59.95 1-pack
+	$offerURL[1] = "https://omaxsleep.com/cart/buybutton.php?id=fBWRz_Qsv0WuUk9eysfaiQ"; //39.95 subscription 1-pack
+	$offerURL[2] = "https://omaxsleep.com/cart/buybutton.php?id=oW1BqM4IwU6K7glOslloYg"; //109.95 subscription 3-pack
+	$offerURL[3] = "https://omaxsleep.com/cart/buybutton.php?id=ByMJfAhwmkelqiM53WzkZQ"; //59.95 OTD 1-pack
 	
 	
 	// Outputs the Offer URL based on parameter

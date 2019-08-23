@@ -6,7 +6,6 @@
 	&:hover {text-decoration:none; background:$color-purple; border-color:transparent;
 		span {color:#fff!important;}
 	}
-	
 	&.red {background:$color-red; border:none;
 		span {color:#fff;}
 		&:hover {background:#ff4903;}
@@ -19,21 +18,21 @@ header {
 	.upper {background-color:$color-dark-gray;
 		a.logo {position:absolute; left:0px; top:50%; transform:translateY(-50%); display:block; @include image-background($image-logo-header,'center center','100% 100%'); overflow:hidden; text-indent:-1000px;}
 		nav.menu {position:absolute;
-			svg.hamburger {position:absolute; display:none; fill:$color-gold;}
-			.pages a {@include font('Montserrat','Regular'); color:#fff; text-align:center; text-transform:uppercase;
+			svg.hamburger {position:absolute; display:none; fill:#6d6b69;}
+			.pages a {@include font('Montserrat','Medium'); color:#fff; text-align:center; text-transform:uppercase;
 				&:hover {color:$color-gold;}
 				&.mobile {display:none;}
 			}
 		}
 		nav.global {position:absolute; right:0px; top:0px; height:100%;
 			& > * {position:absolute; display:block;}
-			a.phone {right:0px; top:0px; bottom:0px; width:100%; background-color:$color-gold; cursor:pointer; display:none;
+			a.phone {right:0px; top:0px; bottom:0px; cursor:pointer; display:none;
 				span {@include font('Montserrat','SemiBold'); color:#fff; text-transform:uppercase; position:absolute;
 					&:before {content:""; @include image-background($image-icon-phone,'center center','100% 100%'); position:absolute; left:0px;}
 				}
 			}
 			a.button {right:0px; top:50%; transform:translateY(-50%); 
-				span {@include font('Montserrat','Bold');}
+				span {@include font('Montserrat','SemiBold');}
 			}
 		}
 	}
@@ -45,34 +44,34 @@ header {
 
 	@include breakpoint('bp_1280'){
 		.upper {
-			&, .container {height:75px;}
+			&, .container {height:80px;}
 			a.logo {@include image-size($image-logo-header,null,30px);}
-			nav.menu {left:450px; top:30px;
-				.pages a {@include font-size(22px); padding:0 15px;}
+			nav.menu {right:210px; top:30px;
+				.pages a {@include font-size(18px); padding:0 30px;}
 			}
 			nav.global {width:180px;
 				a.button {@include button(180px,50px,16px);}
 			}		
 		}
 		.lower {
-			&, .container {height:35px;}
-			.offer {@include font-size(18px,35px);}
+			&, .container {height:40px;}
+			.offer {@include font-size(18px,40px);}
 		}		
 	}
 	@include breakpoint('bp_1024'){
 		.upper {
-			&, .container {height:60px;}
+			&, .container {height:65px;}
 			a.logo {@include image-size($image-logo-header,null,30px);}
-			nav.menu {left:380px; top:25px;
-				.pages a {@include font-size(18px); padding:0 10px;}
+			nav.menu {right:190px; top:25px;
+				.pages a {@include font-size(16px); padding:0 20px;}
 			}
 			nav.global {width:150px;
 				a.button {@include button(150px,40px,14px);}
 			}		
 		}
 		.lower {
-			&, .container {height:30px;}
-			.offer {@include font-size(16px,30px);}
+			&, .container {height:35px;}
+			.offer {@include font-size(16px,35px);}
 		}		
 	}
 	@include breakpoint('<=bp_768'){
@@ -80,9 +79,10 @@ header {
 		.container {width:100%!important; padding:0px!important;}
 		.upper {
 			&, .container {overflow:visible!important;}
+			a.logo {@include image-background-file($image-logo-header-mobile);}
 			nav.menu {left:0px; right:0px;
 				svg.hamburger {display:block; left:10px; cursor:pointer;
-					&:hover {fill:#fff;}
+					&:hover {fill:#949494;}
 				}
 				.pages {position:absolute; left:0px; right:0px; background:$color-gold-footer; z-index:10; height:0px; overflow:hidden; transition:all .25s; box-shadow: 0px 10px 8px -8px rgba(49,48,47,1);
 					a {display:block; border-bottom:1px solid $color-dark-gray;
@@ -95,7 +95,6 @@ header {
 				}
 			}
 			nav.global {right:0px;
-				.button {display:none;}
 				.phone {display:block!important;}
 			}
 		}
@@ -105,68 +104,77 @@ header {
 	}
 	@include breakpoint('bp_768'){
 		.upper {
-			&, .container {height:95px;}
-			a.logo {left:70px; @include image-size($image-logo-header,null,40px);}
+			&, .container {height:80px;}
+			a.logo {left:60px; @include image-size($image-logo-header-mobile,null,36px);}
 			nav.menu {
-				svg.hamburger {top:27.5px; width:40px; height:40px;}
+				svg.hamburger {top:20px; width:40px; height:40px;}
 				.pages {top:140px;
 					a {@include font-size(30px); padding:10px 0;}
 				}
 				&.open .pages {height:calc((4 * 50px) + 1px);}
 			}
-			nav.global {width:340px;
-				a.phone span {left:25px; top:32px; @include font-size(30px); padding-left:55px;
-					&:before {width:40px; height:40px; top:-7px;}
+			nav.global {width:500px;
+				& > * {width:250px;}
+				a.button {right:250px; @include button(250px,80px,26px);}
+				a.phone {right:0px; 
+					span {left:40px; top:28px; @include font-size(26px); padding-left:55px;
+						&:before {width:40px; height:40px; top:-10px;}
+					}
 				}
 			}		
 		}
 		.lower {
-			&, .container {height:45px;}
-			.offer {@include font-size(22px,45px);}
+			&, .container {height:60px;}
+			.offer {@include font-size(22px,60px);}
 		}		
 	}
 	@include breakpoint('bp_540'){
 		.upper {
-			&, .container {height:70px;}
-			a.logo {left:50px; @include image-size($image-logo-header,null,25px);}
+			&, .container {height:60px;}
+			a.logo {left:40px; @include image-size($image-logo-header-mobile,null,25px);}
 			nav.menu {
-				svg.hamburger {top:22.5px; width:25px; height:25px;}
+				svg.hamburger {top:17.5px; width:25px; height:25px;}
 				.pages {top:100px;
 					a {@include font-size(20px); padding:10px 0;}
 				}
 				&.open .pages {height:calc((4 * 40px) + 1px);}
 			}
-			nav.global {width:240px;
-				a.phone span {left:20px; top:25px; @include font-size(20px); padding-left:40px;
-					&:before {width:30px; height:30px; top:-4px;}
+			nav.global {width:340px;
+				& > * {width:170px;}
+				a.button {right:170px; @include button(170px,60px,18px);}
+				a.phone span {left:20px; top:22px; @include font-size(18px); padding-left:40px;
+					&:before {width:30px; height:30px; top:-6px;}
 				}
 			}		
 		}
 		.lower {
-			&, .container {height:30px;}
-			.offer {@include font-size(16px,30px);}
+			&, .container {height:40px;}
+			.offer {@include font-size(16px,40px);}
 		}		
 	}
 	@include breakpoint('bp_360'){
 		.upper {
-			&, .container {height:45px;}
-			a.logo {left:40px; @include image-size($image-logo-header,null,18px);}
+			&, .container {height:40px;}
+			a.logo {left:35px; @include image-size($image-logo-header-mobile,null,18px);}
 			nav.menu {
-				svg.hamburger {top:12.5px; width:20px; height:20px;}
+				svg.hamburger {top:10px; width:20px; height:20px;}
 				.pages {top:70px;
 					a {@include font-size(18px); padding:8px 0;}
 				}
 				&.open .pages {height:calc((4 * 34px) + 1px);}
 			}
-			nav.global {width:160px;
-				a.phone span {left:15px; top:15px; @include font-size(14px); padding-left:25px;
-					&:before {width:20px; height:20px; top:-4px;}
+			nav.global {width:230px;
+				a.button {width:120px; right:110px; @include button(120px,40px,12px);}
+				a.phone {width:110px;
+					span {left:15px; top:15px; @include font-size(12px); padding-left:25px;
+						&:before {width:20px; height:20px; top:-4px;}
+					}
 				}
 			}		
 		}
 		.lower {
-			&, .container {height:25px;}
-			.offer {@include font-size(12px,25px);}
+			&, .container {height:30px;}
+			.offer {@include font-size(12px,30px);}
 		}		
 	}
 }
@@ -174,10 +182,10 @@ header {
 // Global: Main Spacing for Fixed Header
 main {
 	@include breakpoint('bp_1280'){
-		margin-top:110px;
+		margin-top:120px;
 	}
 	@include breakpoint('bp_1024'){
-		margin-top:90px;
+		margin-top:100px;
 	}
 	@include breakpoint('bp_768'){
 		margin-top:140px;

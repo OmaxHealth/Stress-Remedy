@@ -2,110 +2,89 @@
 <?php the_post(); ?>
 
 <main>
-	<section id="banner">
+	<section id="hero">
 		<div class="container">
-				<h1 class="headline">Hemp <span>is not</span> Marijuana</h1>
-				<hr>
-				<p class="subline">Our legally compliant formula will not get you high.</p>
+			<div class="text">
+				<h1>Hemp <span>is not</span> Marijuana</h1>
+				<p>Our legally compliant formula will not get you high.</p>
 			</div>
+		</div>
 	</section>
-
-	<section id="ecs">
+	
+	<section id="system">
 		<div class="container">
-			<h1 class="headline">The <br><span>Endocannabinoid</span><br> System</h1>
-			<p>Hemp oil affects the body’s Endocannabinoid System, which is tasked with balancing the total body for maximum health.</p>
-		</div>
-		<div class="ecs-graphic">
-			<div class="tables">
-			<table class="mytable mytable-head">
-		    <tr>
-		        <td style="text-align: right;"><span>Nervous<br> System</span><img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-nervous-system.png" style="float: right;"/></td>
-		        <td></td>
-		        <td style="text-align: left;"><span>Sleep</span> <img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-sleep.png"/></td>
-		    </tr>
-		</table>
-		<table class="mytable mytable-body">
-		    <tr>
-		        <td style="text-align: right;"><img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-immune-system.png" style="float: right;"/> <span>Immune<br> System</span></td>
-		        <td></td>
-		        <td style="text-align: left;"><img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-appetite.png"/> <span>Appetite</span></td>
-		    </tr>
-		</table>
-		<table class="mytable mytable-footer">
-		    <tr>
-		        <td style="text-align: right;"><span>Hormone<br> Production</span> <img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-hormone-production.png" style="float: right;"/></td>
-		        <td></td>
-		        <td style="text-align: left;"><img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-mood.png"/> <span>Mood</span></td>
-		    </tr>
-		</table>
-		</div>
-		<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/hemp-body.png" class="body"/>
+			<div class="text">
+				<h2><span>The</span> Endocannabinoid System</h2>
+				<p>Hemp oil affects the body’s Endocannabinoid System, which is tasked with balancing the total body for maximum health.</p>
+			</div>
+			<picture class="body">
+				<source srcset="<?php bloginfo('template_directory'); ?>/images/how-it-works/system-desktop.png" media="(min-width: 1024px)">
+				<source srcset="<?php bloginfo('template_directory'); ?>/images/how-it-works/system-mobile.png" media="(max-width: 1023px)">
+				<img srcset="<?php bloginfo('template_directory'); ?>/images/how-it-works/system-desktop.png" alt="The Endocannabinoid System">
+			</picture>
 		</div>
 	</section>
-
+	
 	<section id="ingredients">
 		<div class="container">
-			<h1 class="headline">Patent-Pending Formula,<br>
-			<span>Clinically Researched Ingredients</span></h1>
-			<hr>
-			<h3 class="subline">Omax Sleep & Stress Remedy delivers the ultimate power-trio of clinically researched ingredients to support mind and body wellness.</h3>
-			<div class="ingredients">
-				<div class="container">
-					<div class="ingredient">
-						<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/ingredients-hemp-oil.png" alt="Hemp Oil"/>
-						<h1 class="headline">Hemp Oil</h1>
-						<p>European sourced, phytocannabinoid rich hemp oil, derived from the stems and stalks of industrial hemp. CO2 extracted using pharmaceutical process, for therapeutic potency and purity. </p>
-					</div>
-					<div class="ingredient">
-						<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/ingredients-alphawave.png" alt="AlphaWave"/>
-						<h1 class="headline">AlphaWave&reg; <br> L-Theanine</h1>
-						<p>Highly purified amino acid found naturally in green tea leaves, is one of nature’s most effective natural relaxants: it’s clinically studied to stimulate the production of alpha waves in the brain.</p>
-					</div>
-					<div class="ingredient">
-						<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/ingredients-fish-oil.png" alt="Omega-3"/>
-						<h1 class="headline">ProResolv&trade; <br> Omega-3</h1>
-						<p>Patented blend of omega-3 fatty acids from anchovies and sardines, with a 4:1  EPA-to-DHA ratio, developed for optimal inflammatory response, while supporting joints, mood &amp; mind.</p>
-					</div>
+			<div class="text">
+				<h2><span>Patent-Pending <br/>Formula</span> Clinically <br/>Researched <br/>Ingredients</h2>
+				<p>Omax Sleep & Stress Remedy delivers the ultimate power-trio of clinically researched ingredients to support mind and body wellness.</p>
+			</div>
+			<div class="flexcolumn">
+				<div class="column left">
+					<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/ingredients-hemp-oil.png" alt="hemp oil"/>
+					<h3>Hemp <br/>Oil</h3>
+					<p>European sourced, phytocannabinoid rich hemp oil, derived from the stems and stalks of industrial hemp. CO2 extracted using pharmaceutical process, for therapeutic potency and purity.</p>
 				</div>
+				<div class="column middle">
+					<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/ingredients-alphawave.png" alt="AlphaWave L-Theanine"/>
+					<h3>AlphaWave&reg; <br/>L-Theanine</h3>
+					<p>Highly purified amino acid found naturally in green tea leaves, is one of nature’s most effective natural relaxants: it’s clinically studied to stimulate the production of alpha waves in the brain.</p>
+				</div>
+				<div class="column right">
+					<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/ingredients-fish-oil.png" alt="fish oil"/>
+					<h3>ProResolv&trade; <br/>Omega-3</h3>
+					<p>Patented blend of omega-3 fatty acids from anchovies and sardines, with a 4:1 EPA-to-DHA ratio, developed for optimal inflammatory response, while supporting joints, mood & mind.</p>
+				</div>				
 			</div>
-		</div>
+		</div>		
 	</section>
-
-	<section id="shop-now">
+	
+	<section id="formula">
 		<div class="container">
-			<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/badge-60-day.png" alt="Stress Less Guarantee"/>
-			<div class="shop">
-				<a href="<?php bloginfo('url'); ?>/select-your-plan/"><div class="shop-btn">Shop Now</div></a>
-			</div>
-		</div>
-	</section>
-
-	<section id="more-info">
-		<div class="container">
-			<h1 class="headline">Our legally compliant formula will not get you high.</h1>
-			<hr>
+			<h2>Our legally compliant formula will not get you high.</h2>
 			<p>Many hemp products have been known to have quality issues, so it’s important to invest in premium brands to get the best results. Omax Sleep & Stress Remedy conforms to the highest standards of manufacturing in the supplement industry. We verify the identity, quality and quantity of ingredients on the label, and each batch obtains two certificates of analysis to ensure purity and concentration.</p>
-			<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/badge-cGMP.png" />
-		</div>
-		<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/footer-bird-top.png" class="footer-bird" alt="Omax Health"/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/badge-cGMP.png" alt="cGMP"/>			
+		</div>		
 	</section>
-
-	<section id="list">
+	
+	<section id="purity">
 		<div class="container">
-			<h1 class="headline">Our Purity and Concentration</h1>
-		<hr>
-			<div class="row">
-				<div class="column">
-					<p><i class="fa fa-check" aria-hidden="true"></i> European Sourced &amp; Farmed, EU-Certified</p>
-					<p><i class="fa fa-check" aria-hidden="true"></i> Chemical Free Critical CO2 Extraction</p>
-					<p><i class="fa fa-check" aria-hidden="true"></i> Third-Party Testing and Certification</p>
+			<div class="inner">
+				<h2>Our Purity and Concentration</h2>
+				<div class="flexcolumn">
+					<ul class="column left">
+						<li>European Sourced & Farmed, EU-Certified</li>
+						<li>Chemical Free Critical CO2 Extraction</li>
+						<li>Third-Party Testing and Certification</li>
+					</ul>
+					<ul class="column right">
+						<li>Free of Pesticides, Heavy Metals, Mycotoxins, Fungus</li>
+						<li>Third-Party Testing and Certification</li>
+						<li>Full-Spectrum / Phytocannabinoids from Hemp Oil</li>
+					</ul>
 				</div>
-				<div class="column">
-					<p><i class="fa fa-check" aria-hidden="true"></i> Free of Pesticides, Heavy Metals, Mycotoxins, Fungus</p>
-					<p><i class="fa fa-check" aria-hidden="true"></i> ISO Certified, GMP, NSF Certified Facility Processing</p>
-					<p><i class="fa fa-check" aria-hidden="true"></i> Full-Spectrum / Phytocannabinoids from Hemp Oil</p>
-				</div>
-			</div>
+			</div>		
+		</div>		
+	</section>
+	
+	<section id="lowerCTA">
+		<div class="container">
+			<div class="inner">
+				<img src="<?php bloginfo('template_directory'); ?>/images/how-it-works/icon-guarantee-v2.svg" />
+				<a class="button red" href=""><span>Shop Now</span></a>				
+			</div>			
 		</div>
 	</section>
 

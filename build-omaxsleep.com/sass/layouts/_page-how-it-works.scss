@@ -1,701 +1,378 @@
 // Page: How it Works
 .page-how-it-works {
+	
+	// Section: Hero
+	#hero {
+		.text {@include center-horizontal(); @include center-vertical();
+			& > * {text-align:center; color:#060606;}
+			h1 {position:relative; @include font('Montserrat','Bold'); text-transform:uppercase;
+				span {@include font('Montserrat','Light');}
+				&:after {content:""; position:absolute; background-color:$color-gold;}
+			}
+			p {@include font('Montserrat','Regular');}
+		}
 
-	//Copied from old template global.scss
-	main {
-		* {@include font('Montserrat'); overflow:hidden!important;}
-		section {z-index:1; overflow:visible!important;
-			@include breakpoint('bp_360') {
-	   		overflow:hidden!important;
-	   	}
+		@include breakpoint('>=bp_1024'){
+			& {@include image-background($image-how-hero-bg-desktop,'center center','auto 100%');}
 		}
-		
-		.headline {
-			font-weight: 700;
-			color: $color-gold;
-		
-			@include breakpoint('bp_360') {
-				@include font-size(24px,32px);
-			}
-		
-			@include breakpoint('<=bp_540') {
-				@include font-size(26px,34px);
-			}
-		
-			@include breakpoint('>=bp_768') {
-				@include font-size(32px,34px);
-			}
-		
-			@include breakpoint('>=bp_1024') {
-				@include font-size(36px,42px);
+		@include breakpoint('<=bp_768'){
+			& {@include image-background($image-how-hero-bg-mobile,'center center','auto 100%');}
+		}		
+		@include breakpoint('bp_1280'){
+			.container {height:740px;}
+			.text {
+				h1 {@include font-size(50px); margin-bottom:60px;
+					&:after {bottom:-30px; height:4px; width:360px; left:calc((100% - 360px) / 2);}
+				}
+				p {@include font-size(24px);}
 			}
 		}
-		
-		p {
-			@include font-size(16px,22px);
-		
-			@include breakpoint('>=bp_768') {
-				@include font-size(18px,26px);
-			}
-		
-			@include breakpoint('>=bp_1024') {
-				@include font-size(20px,32px);
+		@include breakpoint('bp_1024'){
+			.container {height:590px;}
+			.text {
+				h1 {@include font-size(40px); margin-bottom:50px;
+					&:after {bottom:-25px; height:3px; width:290px; left:calc((100% - 290px) / 2);}
+				}
+				p {@include font-size(20px);}
 			}
 		}
-		  
-		hr {
-			width: 25%;
-			border: thin solid #ad9d62;
-			margin-top: 5px;
-		}	
+		@include breakpoint('bp_768'){
+			.container {height:740px;}
+			.text {width:450px;
+				h1 {@include font-size(54px,60px); margin-bottom:70px;
+					&:after {bottom:-35px; height:3px; width:270px; left:calc((100% - 270px) / 2);}
+				}
+				p {@include font-size(30px,48px);}
+			}
+		}
+		@include breakpoint('bp_540'){
+			.container {height:520px;}
+			.text {width:340px;
+				h1 {@include font-size(38px,42px); margin-bottom:50px;
+					&:after {bottom:-25px; height:2px; width:190px; left:calc((100% - 190px) / 2);}
+				}
+				p {@include font-size(22px,34px);}
+			}
+		}
+		@include breakpoint('bp_360'){
+			.container {height:340px;}
+			.text {width:220px;
+				h1 {@include font-size(26px,28px); margin-bottom:30px;
+					&:after {bottom:-15px; height:2px; width:130px; left:calc((100% - 130px) / 2);}
+				}
+				p {@include font-size(14px,22px);}
+			}
+		}				
 	}
 	
-	//Section: Banner 
-	#banner {
-		background-image: url('images/how-it-works/hemp-banner.jpg');
-	   background-repeat: no-repeat;
-	   background-position: center;
-	   background-size: cover;
-	   text-align: center;
-	   height: 400px;
-
-	   @include breakpoint('>=bp_768') {
-	   		height: 500px;
-	   	}
-
-	   @include breakpoint('>=bp_1024') {
-	   		height: 600px;
-	   	}
-
-	   .container {
-	   		@include center-vertical();
-	   		
-	   		@include breakpoint('bp_360') {
-	   			margin: 0 auto;
-	   			max-width: 225px;
-	   		}
-
-	   		.headline {
-		    	@include font-size(34px);
-		    	color: #fff;
-		    	text-transform: uppercase;
-		    	font-weight: 700;
-		    	letter-spacing: 3px;
-
-		    	@include breakpoint('>=bp_768') {
-		    		@include font-size(40px);
-		    		letter-spacing: 4px;
-		    	}
-
-		    	@include breakpoint('>=bp_1024') {
-		    		@include font-size(48px);
-		    		letter-spacing: 6px;
-		    	}
-
-		    	@include breakpoint('bp_1280') {
-		    		@include font-size(60px);
-		    		letter-spacing: 12px;
-		    	}
-		    }
-
-		    hr {
-		    	margin-top: 20px;
-		    	width: 150px;
-		    	
-		    	@include breakpoint('bp_1280') {
-		    		width: 225px;
-		    		margin-top: 15px;
-					margin-bottom: 15px;
-		    	}
-		    }
-
-		    .subline {
-		    	color: #fff;
-		    	font-weight: 500;
-		    	padding-bottom: 50px;
-
-		    	@include breakpoint('>=bp_768') {
-		    		max-width: 525px;
-		    		margin: 0 auto;
-		    	}
-		    }
-	   	}
+	// Section: Endocannabinoid System
+	#system {
+		.text {@include center-horizontal();
+			& > * {text-align:center; color:#0b0b0b;}
+			h2 {@include font('Montserrat','Bold'); text-transform:uppercase;
+				span {@include font('Montserrat','Light'); display:block;}
+			}
+			p {@include font('Montserrat','Regular');}
+		}
+		picture {@include center-horizontal();}
+		
+		@include breakpoint('bp_1280'){
+			.container {padding:60px 0;}
+			.text {width:930px; margin-bottom:60px;
+				h2 {@include font-size(50px); margin-bottom:40px;}
+				p {@include font-size(24px,40px);}
+			}
+			picture {width:950px;}
+		}
+		@include breakpoint('bp_1024'){
+			.container {padding:50px 0;}
+			.text {width:750px; margin-bottom:50px;
+				h2 {@include font-size(40px); margin-bottom:30px;}
+				p {@include font-size(20px,32px);}
+			}
+			picture {width:750px;}
+		}
+		@include breakpoint('bp_768'){
+			.container {padding:60px 0;}
+			.text {width:600px; margin-bottom:50px;
+				h2 {@include font-size(54px,64px); margin-bottom:40px;}
+				p {@include font-size(30px,48px);}
+			}
+			picture {width:730px;}
+		}
+		@include breakpoint('bp_540'){
+			.container {padding:40px 0;}
+			.text {width:420px; margin-bottom:40px;
+				h2 {@include font-size(38px,44px); margin-bottom:30px;}
+				p {@include font-size(22px,34px);}
+			}
+			picture {width:500px;}
+		}
+		@include breakpoint('bp_360'){
+			.container {padding:30px 0;}
+			.text {width:280px; margin-bottom:30px;
+				h2 {@include font-size(26px,30px); margin-bottom:20px;}
+				p {@include font-size(14px,22px);}
+			}
+			picture {width:320px;}
+		}
 	}
-
-	// Section: The Endocannabinoid System
-	#ecs {
-	   background-image: url('images/how-it-works/white-bg.jpg');
-	   background-repeat: no-repeat;
-	   background-position: center center;
-	   background-size: cover;
-	   text-align: center;
-	   text-transform: uppercase;
-	   margin: 0 auto;
-	   height: 650px;
-	   padding: 50px 15px;
-
-	   @include breakpoint('>=bp_768') {
-	   		height: 850px;
-	   		padding: 75px 15px;
-	   	}
-
-	   @include breakpoint('>=bp_1024') {
-	   		height: 1000px;
-	   	}
-
-	   hr {
-	    	margin-top: 10px;
-	    	margin-bottom: 25px;
-	    }
-
-	   .headline {
-	    	text-transform: none;
-	    	line-height: 28px;
-
-	    	@include breakpoint('>=bp_768') {
-	    		line-height: 36px;
-	   		}
-
-	   		@include breakpoint('>=bp_1024') {
-	   			line-height: 42px;
-	   		}
-
-	   		span {
-	   			color: #2f2f2f;
-	   			font-weight: 700;
-	   		}
-	    }
-
-	   p {
-	    	text-transform: none;
-    		max-width: 775px;
-    		margin: 0 auto;
-    		padding-top: 25px;
-
-	    	@include breakpoint('bp_360') {
-	   			max-width: 280px;
-	   		}
-	    }
-
-	   .ecs-graphic {	
-	    	@include font('Oswald');
-	    	@include font-size(14px);
-	    	color: #464a49;
-			position: absolute;
-		    left: 0;
-		    right: 0;
-		    top: 190px; 
-
-		    @include breakpoint('>=bp_768') {
-		    	top: 100px; 
-		    }
-
-		    @include breakpoint('>=bp_1024') {
-		    	top: 125px; 
-		    }
-
-	    	.body {
-		    	margin: 0 auto;
-		    	max-width: 350px;
-		    	width: 100%;
-
-		    	@include breakpoint('>=bp_768') {
-		    		max-width: 500px;
-		    	}
-
-		    	@include breakpoint('>=bp_1024') {
-		    		max-width: 600px;
-		    	}
-	    	}
-
-		    .tables {
-	    	    position: relative;
-				top: 165px;
-
-				@include breakpoint('>=bp_768') {
-		    		top: 350px;
-		   		}
-
-		   		@include breakpoint('>=bp_1024') {
-		    		top: 395px;
-		   		}
-		    }
-
-		    .mytable { border-collapse: collapse; width:100%; background-color:transparent; }
-		    .mytable-head, .mytable-body, .mytable-footer { border:1px solid transparent;margin-bottom:0;padding-bottom:0; max-width: 1500px; margin: 0 auto;}
-		    .mytable-head td { border:1px solid transparent; }
-		    .mytable-body td { border:1px solid transparent;border-top:0; max-width: 1500px; margin: 0 auto;}
-		    .mytable-footer  { margin-bottom: -100px }
-		    .mytable-footer td { border:1px solid transparent;border-top:0;}
-
-		    table {
-		    	img {
-		    		width: 30px;
-
-		    		@include breakpoint('>=bp_768') {
-		    			width: 40px;
-		    		}
-		    	}
-
-		    	tr {
-		    		height: 50px;
-
-		    		@include breakpoint('>=bp_768') {
-		    			height: 90px;
-		    		}
-		    	}
-
-		    	td {
-		    		width: 33.33%!important;
-		    		@include font-size(12px,18px);
-
-		    		@include breakpoint('>=bp_768') {
-		    			@include font-size(16px,22px);
-		    		}
-
-		    		&:first-child {
-		    			span {
-		    				text-align: right;
-		    				display: inline-block;
-						    position: relative;
-						    right: 10px;
-						    top: 5px;
-		    			}
-		    		}
-
-		    		&:last-child {
-		    			span {
-		    				text-align: left;
-						    display: inline-block;
-						    position: relative;
-						    left: 50px;
-		    			}
-		    		}
-		    	}
-	 	    }
-
-	 	    .mytable-head {
-	 	    	td {
-	 	    		span {
-	 	    			top: 25px;
-	 	    			@include breakpoint('>=bp_768') {
-			    			top: 30px;
-			    		}
-	 	    		}
-
-	 	    		&:last-child {
-	 	    			position: relative;
-			    		top: -12px;
-	 	    		}
-	 	    	}
-	 	    }
-
-	 	    .mytable-body {
-	 	    	td {
-	 	    		span {
-	 	    			top: -22px;
-	 	    		}
-	 	    	}
-	 	    }
-
-	 	    .mytable-footer {
-	 	    	td {
-	 	    		span {
-	 	    			top: -28px;
-	 	    		}
-	 	    	}
-	 	    }
-	    }
-	}
-
-	// Section: Ingredients 
+	
+	// Section: Ingredients
 	#ingredients {
-		background-image: url('images/how-it-works/concrete-bg.jpg');
-	    background-repeat: no-repeat;
-	    background-position: right center;
-	    background-size: cover;
-	    text-align: center;
-	    padding: 50px 0;
-	
-	    @include breakpoint('>=bp_768') {
-			padding: 75px 0;
+		& {background-color:#f4faff;}
+		.text {
+			& > * {@include center-horizontal(); text-align:center;}
+			h2 {@include font('Montserrat','Bold'); text-transform:uppercase; color:#07175f;
+				span {@include font('Montserrat','Light'); display:block;}
+				br {display:none;}
+			}
+			p {@include font('Montserrat','Regular'); color:#0b0b0b;}
 		}
-	
-		.container {
-			max-width: 1300px;
-			width: auto;		
-		}
-	
-	    .headline {
-			color: $color-gold;
-	
-			span {
-				color: #fff;
-				font-weight: 700;
+		.flexcolumn {
+			.column {
+				img {@include center-horizontal();}
+				h3 {@include font('Montserrat','Medium'); color:$color-gold; text-align:center;}
+				p {@include font('Montserrat','Regular'); color:#0b0b0b; text-align:center;}
 			}
 		}
-	
-		hr {
-	    	top: 10px;
-				position: relative;
-	    }
-	
-		.subline {
-			@include font-size(16px,22px);
-			max-width: 750px;
-			margin: 30px auto 0;
-			color: #fff;
-	
-			@include breakpoint('>=bp_768') {
-				@include font-size(18px,26px);
-			}
-	
-			@include breakpoint('>=bp_1024') {
-				@include font-size(20px,32px);
-			}
-		}
-	
-	   .ingredients {
-			text-align: center;
-			.container {
-				@include breakpoint('>=bp_768') {
-					display: flex;
-					justify-content: space-around;
+		
+		@include breakpoint('bp_1280'){
+			.container {padding:100px 0;}
+			.text {
+				h2 {@include font-size(50px); margin-bottom:40px;
+					span {margin-bottom:10px;}
 				}
-	
-				.ingredient {
-					color: #fff;
-	    			padding: 30px 15px;
-	    			width: 100%;
-	    			max-width: 350px;
-	    			margin: 0 auto;
-	
-	    			@include breakpoint('>=bp_768') {
-	    				width: 33.33%;
-	    				max-width: none;
-	    			}
-	
-					img {
-					    width: 225px;
-						margin: 0 auto;
-					}
-	
-					p {
-						@include font-size(14px,20px);
-						padding: 20px 0 0 0;
-	
-						@include breakpoint('>=bp_1024') {
-							@include font-size(18px,26px);
-						}
-					}
-	
-					&:first-child {
-						img {
-							width: 260px;
-							margin-top: -8px;
-						}
-					}
-					&:last-child {
-						img {
-							margin-top: -5px;
-						}
-					}
+				p {@include font-size(24px,40px); width:930px;}
+			}
+			.flexcolumn {margin-top:60px;
+				.column {width:33.3%; padding:0 20px;
+					img {height:100px; margin-bottom:20px;}
+					h3 {@include font-size(34px,38px); margin-bottom:20px;} 
+					p {@include font-size(24px,40px);}
 				}
 			}
-		} 
+		}
+		@include breakpoint('bp_1024'){
+			.container {padding:80px 0;}
+			.text {
+				h2 {@include font-size(40px); margin-bottom:36px;
+					span {margin-bottom:10px;}
+				}
+				p {@include font-size(20px,32px); width:740px;}
+			}
+			.flexcolumn {margin-top:50px;
+				.column {width:33.3%; padding:0 15px;
+					img {height:90px; margin-bottom:20px;}
+					h3 {@include font-size(26px,34px); margin-bottom:15px;} 
+					p {@include font-size(20px,32px);}
+				}
+			}
+		}
+		@include breakpoint('<=bp_768'){
+			.text {@include center-horizontal();
+				span {display:inline!important;}
+				br {display:block;}
+			}
+			.flexcolumn {
+				.column:nth-of-type(1) h3 br {display:none;}
+				.column:last-of-type {margin-bottom:0px;}
+			}
+		}
+		@include breakpoint('bp_768'){
+			.container {padding:100px 0;}
+			.text {width:650px;
+				h2 {@include font-size(50px,60px); margin-bottom:60px;}
+				p {@include font-size(30px,48px);}
+			}
+			.flexcolumn {margin-top:50px;
+				.column {padding:0 80px; margin-bottom:80px;
+					img {height:300px; margin-bottom:20px;}
+					h3 {@include font-size(48px,62px); margin-bottom:30px;} 
+					p {@include font-size(30px,48px);}
+				}
+			}
+		}
+		@include breakpoint('bp_540'){
+			.container {padding:60px 0;}
+			.text {width:450px;
+				h2 {@include font-size(38px,44px); margin-bottom:40px;}
+				p {@include font-size(22px,34px);}
+			}
+			.flexcolumn {margin-top:40px;
+				.column {padding:0 80px; margin-bottom:60px;
+					img {height:200px; margin-bottom:10px;}
+					h3 {@include font-size(34px,44px); margin-bottom:20px;} 
+					p {@include font-size(22px,34px);}
+				}
+			}
+		}
+		@include breakpoint('bp_360'){
+			.container {padding:40px 0;}
+			.text {width:320px;
+				h2 {@include font-size(26px,30px); margin-bottom:20px;}
+				p {@include font-size(14px,22px);}
+			}
+			.flexcolumn {margin-top:40px;
+				.column {padding:0 50px; margin-bottom:30px;
+					img {height:140px; margin-bottom:0px;}
+					h3 {@include font-size(22px,30px); margin-bottom:10px;} 
+					p {@include font-size(14px,22px);}
+				}
+			}
+		}
+	}
 	
-		&:before {
-			content: "";
-		    background: url('images/how-it-works/molecule-left.png');
-		    background-repeat: no-repeat;
-		    position: absolute;
-		    z-index: 1;
-		    height: 300px;
-		    width: 200px;
-		    left: -50px;
-		    top: -180px;
-		    background-size: 200px;
-		    background-position:bottom right;
+	// Section: Formula
+	#formula {
+		& {background-color:#051147;}
+		.container > * {@include center-horizontal(); color:#fff; text-align:center;}
+		h2 {@include font('Montserrat','SemiBold');}
+		p {@include font('Montserrat','Regular');}
+		
+		@include breakpoint('bp_1280'){
+			.container {padding:130px 0 100px;}
+			h2 {@include font-size(42px); margin-bottom:50px;}
+			p {@include font-size(24px,40px); width:1000px; margin-bottom:20px;}
+			img {width:115px;}
+		}
+		@include breakpoint('bp_1024'){
+			.container {padding:100px 0 80px;}
+			h2 {@include font-size(34px); margin-bottom:40px;}
+			p {@include font-size(20px,32px); width:800px; margin-bottom:20px;}
+			img {width:90px;}
+		}
+		@include breakpoint('bp_768'){
+			.container {padding:100px 40px 80px;}
+			h2 {@include font-size(50px,58px); width:600px; margin-bottom:80px;}
+			p {@include font-size(30px,48px); margin-bottom:20px;}
+			img {width:120px;}
+		}
+		@include breakpoint('bp_540'){
+			.container {padding:60px 30px 50px;}
+			h2 {@include font-size(34px,40px); width:400px; margin-bottom:40px;}
+			p {@include font-size(22px,34px); margin-bottom:20px;}
+			img {width:80px;}
+		}
+		@include breakpoint('bp_360'){
+			.container {padding:40px 20px 30px;}
+			h2 {@include font-size(24px,28px); width:280px; margin-bottom:20px;}
+			p {@include font-size(14px,22px); margin-bottom:15px;}
+			img {width:60px;}
+		}
+	}
 	
-		    @include breakpoint('bp_1280') {
-		    	width:280px; background-size: 300px;
-		    }
-		    @include breakpoint('bp_1024') {
-		    	width:200px; height:160px; top:-80px;
-		    }
-		    @include breakpoint('<=bp_768') {
-		    	width:160px; height:120px; top:-80px;
-		    }
+	// Section: Purity
+	#purity {
+		.inner {@include center-vertical();}
+		h2 {@include font('Montserrat','SemiBold'); text-align:center;}
+		.flexcolumn {margin-left:auto; margin-right:auto;
+			li {@include font('Montserrat','Regular');}
+		}
+		
+		@include breakpoint('>=bp_1024'){
+			& {@include image-background($image-how-purity-bg-desktop,'center center','cover');}
+			.flexcolumn .column {width:50%;
+				li:last-of-type {margin-bottom:0px;}
+			}
+		}
+		@include breakpoint('<=bp_768'){
+			& {@include image-background($image-how-purity-bg-mobile,'center center','cover');}
+		}		
+		@include breakpoint('bp_1280'){
+			.container {height:620px;}
+			h2 {@include font-size(42px); margin-bottom:80px;}
+			.flexcolumn {
+				.column {
+					li {@include font-size(20px); margin-bottom:50px;}
+				}
+			}
+		}
+		@include breakpoint('bp_1024'){
+			.container {height:500px;}
+			h2 {@include font-size(34px); margin-bottom:60px;}
+			.flexcolumn {
+				.column {
+					li {@include font-size(18px); margin-bottom:50px;}
+				}
+			}
+		}
+		@include breakpoint('bp_768'){
+			.container {height:920px;}
+			h2 {@include font-size(50px,58px); margin-bottom:60px;}
+			.flexcolumn {
+				.column {
+					li {@include font-size(30px,36px); padding:0 40px; margin-bottom:50px;}
+				}
+			}
+		}
+		@include breakpoint('bp_540'){
+			.container {height:650px;}
+			h2 {@include font-size(34px,40px); margin-bottom:30px;}
+			.flexcolumn {
+				.column {
+					li {@include font-size(22px,34px); padding:0 20px; margin-bottom:20px;}
+				}
+			}
+		}
+		@include breakpoint('bp_360'){
+			.container {height:440px;}
+			h2 {@include font-size(22px,28px); margin-bottom:20px;}
+			.flexcolumn {
+				.column {
+					li {@include font-size(14px,22px); padding:0 15px; margin-bottom:15px;}
+				}
+			}
+		}
+	}
+	
+	// Section: Purity
+	#lowerCTA {
+		.inner {@include center-vertical();
+			& > * {@include center-horizontal();}
+		}
+
+		@include breakpoint('>=bp_1024'){
+			& {@include image-background($image-how-lowerCTA-bg-desktop,'center center','cover');}
+		}
+		@include breakpoint('<=bp_768'){
+			& {@include image-background($image-how-lowerCTA-bg-mobile,'center center','cover');}
+		}		
+		@include breakpoint('bp_1280'){
+			.container {height:580px;}
+			.inner {
+				img {width:200px; margin-bottom:70px;}
+				a.button {@include button(250px,60px,20px);}
+			}
+		}
+		@include breakpoint('bp_1024'){
+			.container {height:460px;}
+			.inner {
+				img {width:160px; margin-bottom:60px;}
+				a.button {@include button(200px,50px,16px);}
+			}
+		}
+		@include breakpoint('bp_768'){
+			.container {height:580px;}
+			.inner {
+				img {width:240px; margin-bottom:60px;}
+				a.button {@include button(300px,72px,22px);}
+			}
+		}
+		@include breakpoint('bp_540'){
+			.container {height:400px;}
+			.inner {
+				img {width:180px; margin-bottom:40px;}
+				a.button {@include button(210px,50px,16px);}
+			}
+		}
+		@include breakpoint('bp_360'){
+			.container {height:280px;}
+			.inner {
+				img {width:120px; margin-bottom:30px;}
+				a.button {@include button(140px,34px,12px);}
+			}
 		}
 	}	
 	
-	
-
-	// Section: More Info
-	#more-info {
-		background-image: url('images/how-it-works/concrete-bg.jpg');
-	   background-repeat: no-repeat;
-	   background-position: right center;
-	   background-size: cover;
-		text-align: center;
-		
-		.container {
-			text-align: center;
-		    padding: 50px 15px;
-
-		    @include breakpoint('>=bp_768') {
-				padding: 125px 30px;
-				margin: 0 auto;
-			}
-
-			.headline {
-				color: $color-gold;
-
-				@include breakpoint('bp_360') {
-					@include font-size(22px,28px);
-				}
-			}
-
-			hr {
-	    		margin-top: 15px;
-	    		margin-bottom: 15px;
-			    width: 150px;
-	    	}
-
-			p {
-	    		font-weight: 400;
-	    		color: #fff;
-	    		margin: 0 auto 35px;
-
-	    		@include breakpoint('>=bp_768') {
-	    			max-width: 725px;
-	    			width: 100%;
-	    			margin-bottom: 50px;
-	    		}
-	    	}
-
-	    	.certificate-btn {
-	    		@include font-size(16px);
-				color: #fff;
-				text-transform: uppercase;
-				width: 100%;
-				padding: 12px 20px;
-				border: 1px solid #fff;
-				letter-spacing: 2px;
-
-				@include breakpoint('>=bp_768') {
-					@include font-size(20px);
-					width: 300px;
-					padding-left: 50px;
-					padding-right: 50px;
-				}
-
-				@include breakpoint('>=bp_1024') {
-					width: 400px;
-				}
-	    	}
-
-	    	img {
-	    		margin: 50px auto 0;
-	    		width: 75px;
-	    	}
-		}
-		
-		.footer-bird {
-			display: none;
-			@include breakpoint('bp_1280') {
-				display: block;
-				position: absolute;
-			    opacity: 0.5;
-			    top: 400px;
-			    left: 125px;
-			    max-width: 250px;
-			    width: 100%;
-			}
-		}
-
-		&:before {
-			content: "";
-		    background: url('images/how-it-works/molecule-left.png');
-		    background-repeat: no-repeat;
-		    position: absolute;
-		    z-index: 5;
-		    height: 300px;
-		    width: 200px;
-		    left: 0px;
-		    top: -180px;
-		    background-size: 200px;
-		    background-position:bottom right;
-
-		    @include breakpoint('bp_1280') {
-		    	background-size: 300px;
-		    }
-		    @include breakpoint('bp_1024') {
-		    	width:150px; height:160px; top:-80px;
-		    }
-		    @include breakpoint('<=bp_768') {
-		    	width:80px; height:120px; top:-80px;
-		    }
-		}
-	}
-
-	// Section: List
-	#list {
-		background-image: url('images/how-it-works/tubes-bg.jpg');
-	   background-repeat: no-repeat;
-	   background-position: right center;
-	   background-size: cover;
-		text-align: center;
-		
-		.container {
-			text-align: center;
-		    padding: 50px 15px;
-
-		    @include breakpoint('>=bp_768') {
-				padding: 125px 30px;
-				margin: 0 auto;
-			}
-
-			.headline {
-				color: $color-gold;
-			}
-
-			hr {
-	    		margin-top: 15px;
-	    		margin-bottom: 25px;
-			    width: 150px;
-	    	}
-
-	    	.row {
-			    width: 100%;
-			    max-width: 450px;
-			    margin: 0 auto;
-			    text-align: left;
-
-				@include breakpoint('>=bp_768') {
-					display: -webkit-box; 
-				    display: -moz-box;         
-				    display: -ms-flexbox;      
-				    display: -webkit-flex;     
-				    display: flex; 
-				    justify-content: space-around;
-				    max-width: none;
-				}
-
-			    .column {
-			    	width: 100%;
-			    	margin-left: auto;
-			    	margin-right: auto;
-
-			    	@include breakpoint('>=bp_768') {
-			    		width: 50%;
-			    		margin: 0 5px;
-			    	}
-			    }
-
-		    	p {
-		    		color: #fff;
-		    		padding-bottom: 20px;
-		    	}
-
-		    	i {
-		    		color: $color-gold;
-		    	}
-		    }
-		}
-
-		&:before {
-			content: "";
-		    background: url('images/how-it-works/molecule-right.png');
-		    background-repeat: no-repeat;
-		    position: absolute;
-		    z-index: 5;
-		    height: 300px;
-		    width: 200px;
-		    right: 0px;
-		    top: -160px;
-		    background-size: 200px;
-		    background-position: bottom left;
-
-		    @include breakpoint('bp_1280') {
-		    	background-size: 300px;
-		    }
-		    @include breakpoint('bp_1024') {
-		    	width:150px; height:140px; top:-60px;
-		    }
-		    @include breakpoint('<=bp_768') {
-		    	width:120px; height:120px; top:-60px;
-		    }
-		}
-	}
-
-	// Section: Shop Now
-	#shop-now {
-		background-image: url('images/how-it-works/shop-now-banner.jpg');
-	   background-repeat: no-repeat;
-	   background-size: cover;
-	   background-position: center bottom;
-	   text-align: center;
-
-	   @include breakpoint('bp_1280') {
-	    	background-position: center -200px;
-	    	background-size: 120%;
-	    }
-
-	   .container {
-			padding: 50px 15px;
-
-			@include breakpoint('>=bp_768') {
-				padding-top: 100px;
-				padding-bottom: 100px;
-			}
-
-			@include breakpoint('>=bp_1024') {
-				padding-top: 125px;
-				padding-bottom: 125px;
-			}
-		}
-
-	   img {
-	    	margin: 0 auto 50px;
-	    	width: 175px;
-
-	    	@include breakpoint('>=bp_1024') {
-	    		margin-bottom: 75px;
-	    	}
-	    }
-
-	   .shop {
-			a {
-				.shop-btn {
-					@include font-size(12px);
-					font-weight: 700;
-					color: #2f2f2f;
-					text-transform: uppercase;
-					background: $color-gold-gradient;
-					margin: 0 auto;
-					padding: 12px 0;
-					width: 150px;
-					letter-spacing: 1px;
-					-webkit-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.25);
-				    -moz-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.25);
-				    box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.25);
-				    border: 1px solid rgba(211, 170, 81, 0.75);
-
-					@include breakpoint('>=bp_768') {
-						@include font-size(14px);
-						width: 175px;
-						padding: 15px 0;
-					}
-
-					&:hover,
-					&:active {
-						background: $color-purple;
-						border-color: transparent;
-						color:#fff;
-					}
-				}
-			}
-		}	
-	}
 }

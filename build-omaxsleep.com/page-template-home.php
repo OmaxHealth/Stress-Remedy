@@ -7,31 +7,24 @@
 
 <main>
 	<section id="hero">
-		<div class="container">
-			<div class="intro">
-				<h1>Sleep like you never<br/>dreamed possible.</h1>
-				<ul class="checkmark">
-					<li>Fall asleep faster</li>
-					<li>Stay asleep longer</li>
-					<li>Awake refreshed</li>
-				</ul>
-			</div>
-			<a class="flexcolumn" href="<?php bloginfo('url'); ?>/select-your-plan/">
-				<div class="column left">
-					<div class="cta">
-						<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/home/hero-risk-free.png" alt="Risk Free TV Offer" />
-						<div class="ln1">Free Shipping!</div>
-						<div class="button red"><span>Order Now</span></div>						
-					</div>
+		<div class="image">
+			<div class="container">
+				<div class="intro">
+					<h1><strong>Sleep</strong> like you never <br/>dreamed possible</h1>
+					<p>Fall asleep faster. Stay asleep longer. <br/>Awake refreshed.</p>
 				</div>
-				<div class="column right">
+				<div class="cta">
+					<a class="button red" href="<?php bloginfo('url'); ?>/select-your-plan/"><span>Order Now</span></a>
+					<div class="ln1">Free Shipping!</div>
+				</div>
+				<div class="product">
 					<picture class="product">
-						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png, <?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP@2x.png 2x" media="(min-width: 768px)">
-						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png" media="(max-width: 767px)">
-						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png" alt="Omax Sleep & Stress Remedy">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/hero-product-desktop.png, <?php bloginfo('template_directory'); ?>/images/home/hero-product-desktop@2x.png 2x" media="(min-width: 1024px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/hero-product-desktop.png" media="(max-width: 1023px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/hero-product-desktop.png" alt="Omax Sleep & Stress Remedy">
 					</picture>
 				</div>
-			</a>
+			</div>
 		</div>
 	</section>
 
@@ -39,7 +32,7 @@
 		<div class="container">
 			<div class="flexcolumn">
 				<div class="column left">
-					<img src="<?php bloginfo('template_directory'); ?>/images/home/icon-guarantee.svg" alt="guarantee"/>
+					<img src="<?php bloginfo('template_directory'); ?>/images/home/icon-guarantee-v2.svg" alt="guarantee"/>
 				</div>
 				<div class="column right">
 					<h2>3-night risk-free <br/>sleep guarantee</h2>
@@ -178,9 +171,9 @@
 			<div class="flexcolumn">
 				<div class="column left">
 					<picture class="product">
-						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png, <?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP@2x.png 2x" media="(min-width: 768px)">
-						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png" media="(max-width: 767px)">
-						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png" alt="Omax Sleep & Stress Remedy">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/lowerCTA-single-box-HEMP.png, <?php bloginfo('template_directory'); ?>/images/home/lowerCTA-single-box-HEMP@2x.png 2x" media="(min-width: 768px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/lowerCTA-single-box-HEMP.png" media="(max-width: 767px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/lowerCTA-single-box-HEMP.png" alt="Omax Sleep & Stress Remedy">
 					</picture>
 				</div>
 				<div class="column right">
@@ -191,7 +184,6 @@
 						<li>No grogginess!</li>
 					</ul>
 					<div class="cta">
-						<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/home/hero-risk-free.png" alt="Risk Free TV Offer" />
 						<div class="ln1">Limited Time: Free Shipping!</div>
 						<a class="button red" href="<?php bloginfo('url'); ?>/select-your-plan/"><span>Order Now</span></a>						
 					</div>

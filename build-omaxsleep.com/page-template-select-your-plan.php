@@ -8,6 +8,23 @@
 		</div>
 	</section>
 	
+	<section id="offer">
+		<div class="container">
+			<div class="flexcolumn">
+				<div class="column left">
+					<h2>Enjoy Omax Sleep & Stress Remedy <strong>+ 2 FREE Gifts</strong> with entry into our VIP Membership</h2>
+				</div>
+				<div class="column right">
+					<picture class="product">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/select-your-plan/upper-offer.png, <?php bloginfo('template_directory'); ?>/images/select-your-plan/upper-offer@2x.png 2x" media="(min-width: 768px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/select-your-plan/upper-offer.png" media="(max-width: 767px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/select-your-plan/upper-offer.png" alt="Omax Sleep & Stress Remedy">
+					</picture>
+				</div>
+			</div>
+		</div>	
+	</section>
+	
 	<section id="mainCTA">
 		<div class="headline">
 			<div class="container">
@@ -22,7 +39,7 @@
 						<div class="price">
 							<span class="pt1">$</span><span class="pt2">39</span><span class="pt3">95</span><small>*</small>
 						</div>
-						<div class="ln1">Plus Free Gift</div>
+						<div class="ln1">Plus 2 Free Gifts</div>
 						<hr/>
 						<div class="ln2"><strong>$20</strong> Savings!</div>
 						<div class="button"><span>Order Now</span></div>
@@ -33,7 +50,7 @@
 						<div class="price">
 							<span class="pt1">$</span><span class="pt2">109</span><span class="pt3">95</span><small>*</small>
 						</div>
-						<div class="ln1">Plus Free Gift</div>
+						<div class="ln1">Plus 2 Free Gifts</div>
 						<hr/>
 						<div class="ln2"><strong>$70</strong> Savings!</div>
 						<div class="button"><span>Order Now</span></div>

@@ -50,14 +50,14 @@
 				</div>
 			</nav>
 			<nav class="global">
-				<a class="phone" href="tel:800-480-6370"><span>Click to Call</span></a>
 				<a class="button red" href="<?php bloginfo('url'); ?>/select-your-plan/"><span>Order Now</span></a>
+				<a class="phone" href="tel:800-480-6370"><span>Call Us</span></a>
 			</nav>
 		</div>
 	</div>
 	<div class="lower">
 		<div class="container">
-			<div class="offer">Risk Free TV Offer!</div>
+			<div class="offer">Limited Time Offer!</div>
 		</div>
 	</div>
 </header>

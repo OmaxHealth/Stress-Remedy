@@ -2,9 +2,8 @@
 $image-folder: 'images/';
 
 // SASS: Global Images
-$image-logo-header: (width:375px,height:50px,file:'global/logo-omax-sleep.svg');
-$image-logo-header-mobile: (width:225px,height:50px,file:'global/logo-omax-sleep-no-tagline.svg');
-$image-icon-phone: (width:600px,height:600px,file:'global/icon-phone-circle-gold.svg');
+$image-logo-header: (width:360px,height:120px,file:'global/logo-omax-health-white.svg');
+$image-icon-phone: (width:600px,height:600px,file:'global/icon-phone-circle.svg');
 $image-logo-footer: (width:174px,height:130px,file:'global/footer-logo.png');
 $image-footer-bird: (width:240px,height:169px,file:'global/footer-bird-bottom.png');
 $image-social-facebook: (width:100px,height:100px,file:'global/icon-social-facebook.svg');
@@ -13,12 +12,12 @@ $image-social-twitter: (width:100px,height:100px,file:'global/icon-social-twitte
 $image-social-youtube: (width:100px,height:100px,file:'global/icon-social-youtube.svg');
 
 // SASS: Home Page Images
-$image-home-hero-bg-desktop: (width:2000px,height:750px,file:'home/hero-bg-desktop.jpg');
-$image-home-hero-bg-mobile: (width:1024px,height:1000px,file:'home/hero-bg-mobile.jpg');
-$image-home-hero-product-desktop: (width:580px,height:300px,file:'home/hero-product-desktop.png');
-$image-home-hero-product-mobile: (width:550px,height:290px,file:'home/hero-product-mobile.png');
+$image-home-hero-bg-desktop: (width:2000px,height:800px,file:'home/hero-bg-desktop.jpg');
+$image-home-hero-bg-mobile: (width:1024px,height:1200px,file:'home/hero-bg-mobile.jpg');
+$image-home-hero-product-desktop: (width:550px,height:440px,file:'home/hero-product-desktop.png');
+$image-home-hero-product-mobile: (width:470px,height:300px,file:'home/hero-product-mobile.png');
 
-$image-home-sleep-bg-desktop: (width:2000px,height:980px,file:'home/sleep-bg-desktop.jpg');
+$image-home-sleep-bg-desktop: (width:2000px,height:1100px,file:'home/sleep-bg-desktop.jpg');
 $image-home-sleep-bg-mobile: (width:1000px,height:980px,file:'home/sleep-bg-mobile.jpg');
 $image-home-icon-moon: (width:200px,height:200px,file:'home/icon-moon.svg');
 $image-home-stress-bg: (width:2000px,height:1100px,file:'home/stress-bg.jpg');
@@ -33,7 +32,7 @@ $image-home-benefits-box3-mobile: (width:360px,height:350px,file:'home/benefits-
 
 $image-home-icon-check-white: (width:150px,height:150px,file:'home/icon-check-white.svg');
 $image-home-lowerCTA-bg-desktop: (width:125px,height:700px,file:'home/lowerCTA-bg-desktop.png');
-$image-home-lowerCTA-product: (width:550px,height:450px,file:'home/lowerCTA-single-box-HEMP.png');
+$image-home-lowerCTA-product: (width:380px,height:550px,file:'home/lowerCTA-product.png');
 
 // SASS: Select Your Plan images
 $image-shop-icon-guarantee: (width:600px,height:600px,file:'select-your-plan/icon-guarantee.svg');

@@ -1,8 +1,8 @@
 // Page: Reviews
 .page-reviews {
 	main {
-		h1.headline {@include font('Montserrat','Bold'); color:$color-gold; text-align:center;}
-		hr {width:25%; border-top:2px solid $color-gold; margin: 20px auto;}
+		h1.headline {@include font('Montserrat','Bold'); color:$color-blue-dark; text-align:center;}
+		hr {width:25%; border-top:2px solid $color-blue-dark; margin: 20px auto;}
 		.jdgm-widget {
 			& > *:not(h1) {@include font('Montserrat','Regular');}	
 			.jdgm-rev {
@@ -10,6 +10,13 @@
 				.jdgm-rev__content {
 					b.jdgm-rev__title {@include font('Montserrat','Bold');}
 				}
+			}
+			.jdgm-histogram__bar-content {background:#49afd1;}
+			.jdgm-star.jdgm--on,
+			.jdgm-star.jdgm--off {color:#49afd1;}
+			.jdgm-rev__buyer-badge {background-color:$color-blue-dark;}
+			.jdgm-widget-actions-wrapper a {border-color:transparent; color:#fff; background-color:$color-blue-light;
+				&:hover {background-color:$color-blue-dark;}
 			}
 		}
 

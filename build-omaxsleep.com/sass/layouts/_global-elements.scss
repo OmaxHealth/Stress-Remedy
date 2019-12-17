@@ -1,26 +1,26 @@
 // Global: Button
 .button {
-	& {display:block; position:relative; background:$color-gold-gradient; border:1px solid #dcaf46;
-		span {display:block; position:relative; width:100%; @include font('Montserrat','Bold'); color:$color-black; text-transform:uppercase; letter-spacing:0.04em; text-align:center;}
+	& {display:block; position:relative; background:$color-gold-gradient; border:1px solid #dcaf46; border-radius:30px;
+		span {display:block; position:relative; width:100%; @include font('Montserrat','SemiBold'); color:$color-black; text-transform:uppercase; letter-spacing:0.04em; text-align:center;}
 	}
 	&:hover {text-decoration:none; background:$color-purple; border-color:transparent;
 		span {color:#fff!important;}
 	}
 	&.red {background:$color-red; border:none;
 		span {color:#fff;}
-		&:hover {background:#ff4903;}
+		&:hover {background:#c2e8f9;}
 	}
 }
 
 // Global: Top Header
 header {
 	& {background-color:#fff; position:fixed; top:0px; left:0px; right:0px; z-index:100;}
-	.upper {background-color:$color-dark-gray;
+	.upper {background-color:#193059;
 		a.logo {position:absolute; left:0px; top:50%; transform:translateY(-50%); display:block; @include image-background($image-logo-header,'center center','100% 100%'); overflow:hidden; text-indent:-1000px;}
 		nav.menu {position:absolute;
-			svg.hamburger {position:absolute; display:none; fill:#6d6b69;}
+			svg.hamburger {position:absolute; display:none; fill:#fff;}
 			.pages a {@include font('Montserrat','Medium'); color:#fff; text-align:center; text-transform:uppercase;
-				&:hover {color:$color-gold;}
+				&:hover {color:#4eb8d9;}
 				&.mobile {display:none;}
 			}
 		}
@@ -32,11 +32,11 @@ header {
 				}
 			}
 			a.button {right:0px; top:50%; transform:translateY(-50%); 
-				span {@include font('Montserrat','SemiBold');}
+				span {@include font('Montserrat','SemiBold'); letter-spacing:0.15em;}
 			}
 		}
 	}
-	.lower {background-color:$color-purple;
+	.lower {background-color:#0b162b;
 		.offer {position:absolute; left:0px; right:0px; @include font('Montserrat','Regular'); color:#fff; text-align:center;
 			span {font-family:inherit; font-weight:inherit; font-size:inherit; line-height:inherit; color:inherit;}
 		}
@@ -44,13 +44,13 @@ header {
 
 	@include breakpoint('bp_1280'){
 		.upper {
-			&, .container {height:80px;}
-			a.logo {@include image-size($image-logo-header,null,30px);}
-			nav.menu {right:210px; top:30px;
+			&, .container {height:60px;}
+			a.logo {@include image-size($image-logo-header,null,40px);}
+			nav.menu {right:210px; top:24px;
 				.pages a {@include font-size(18px); padding:0 30px;}
 			}
 			nav.global {width:180px;
-				a.button {@include button(180px,50px,16px);}
+				a.button {@include button(160px,40px,12px);}
 			}		
 		}
 		.lower {
@@ -60,17 +60,17 @@ header {
 	}
 	@include breakpoint('bp_1024'){
 		.upper {
-			&, .container {height:65px;}
-			a.logo {@include image-size($image-logo-header,null,30px);}
+			&, .container {height:60px;}
+			a.logo {@include image-size($image-logo-header,null,40px);}
 			nav.menu {right:190px; top:25px;
 				.pages a {@include font-size(16px); padding:0 20px;}
 			}
 			nav.global {width:150px;
-				a.button {@include button(150px,40px,14px);}
+				a.button {@include button(150px,40px,12px);}
 			}		
 		}
 		.lower {
-			&, .container {height:35px;}
+			&, .container {height:40px;}
 			.offer {@include font-size(16px,35px);}
 		}		
 	}
@@ -79,14 +79,13 @@ header {
 		.container {width:100%!important; padding:0px!important;}
 		.upper {
 			&, .container {overflow:visible!important;}
-			a.logo {@include image-background-file($image-logo-header-mobile);}
 			nav.menu {left:0px; right:0px;
 				svg.hamburger {display:block; left:10px; cursor:pointer;
-					&:hover {fill:#949494;}
+					&:hover {fill:#4eb8d9;}
 				}
-				.pages {position:absolute; left:0px; right:0px; background:$color-gold-footer; z-index:10; height:0px; overflow:hidden; transition:all .25s; box-shadow: 0px 10px 8px -8px rgba(49,48,47,1);
-					a {display:block; border-bottom:1px solid $color-dark-gray;
-						&:hover {color:$color-dark-gray;}
+				.pages {position:absolute; left:0px; right:0px; background:#F8FDFE; z-index:10; height:0px; overflow:hidden; transition:all .25s; box-shadow: 0px 10px 8px -8px rgba(49,48,47,1);
+					a {display:block; border-bottom:1px solid $color-dark-gray; color:$color-blue-dark;
+						&:hover {color:#193059;}
 						&.mobile {display:block;}
 					}
 				}
@@ -95,6 +94,7 @@ header {
 				}
 			}
 			nav.global {right:0px;
+				a.button {border-radius:0px;}
 				.phone {display:block!important;}
 			}
 		}
@@ -105,7 +105,7 @@ header {
 	@include breakpoint('bp_768'){
 		.upper {
 			&, .container {height:80px;}
-			a.logo {left:60px; @include image-size($image-logo-header-mobile,null,36px);}
+			a.logo {left:70px; @include image-size($image-logo-header,null,50px);}
 			nav.menu {
 				svg.hamburger {top:20px; width:40px; height:40px;}
 				.pages {top:140px;
@@ -115,7 +115,7 @@ header {
 			}
 			nav.global {width:500px;
 				& > * {width:250px;}
-				a.button {right:250px; @include button(250px,80px,26px);}
+				a.button {right:240px; @include button(250px,80px,24px);}
 				a.phone {right:0px; 
 					span {left:40px; top:28px; @include font-size(26px); padding-left:55px;
 						&:before {width:40px; height:40px; top:-10px;}
@@ -131,7 +131,7 @@ header {
 	@include breakpoint('bp_540'){
 		.upper {
 			&, .container {height:60px;}
-			a.logo {left:40px; @include image-size($image-logo-header-mobile,null,25px);}
+			a.logo {left:50px; @include image-size($image-logo-header,null,36px);}
 			nav.menu {
 				svg.hamburger {top:17.5px; width:25px; height:25px;}
 				.pages {top:100px;
@@ -155,7 +155,7 @@ header {
 	@include breakpoint('bp_360'){
 		.upper {
 			&, .container {height:40px;}
-			a.logo {left:35px; @include image-size($image-logo-header-mobile,null,18px);}
+			a.logo {left:40px; @include image-size($image-logo-header,null,24px);}
 			nav.menu {
 				svg.hamburger {top:10px; width:20px; height:20px;}
 				.pages {top:70px;
@@ -182,7 +182,7 @@ header {
 // Global: Main Spacing for Fixed Header
 main {
 	@include breakpoint('bp_1280'){
-		margin-top:120px;
+		margin-top:100px;
 	}
 	@include breakpoint('bp_1024'){
 		margin-top:100px;
@@ -201,18 +201,18 @@ main {
 // Global: Footer
 footer {
 	.upper {
-		& {background:$color-gray; text-align:center;}
+		& {background:#f8fdfe; text-align:center;}
 		img.logo {@include center-horizontal();}
 		nav.pages {@include flexcolumn(); justify-content:center!important;
-			a {@include font('Montserrat','SemiBold'); color:#0e0d0d; text-transform:uppercase; text-align:center; transition:color .2s ease;
-				&:hover {color:$color-gold-footer;}
+			a {@include font('Montserrat','SemiBold'); color:$color-blue-dark; text-transform:uppercase; text-align:center; transition:color .2s ease;
+				&:hover {color:$color-blue-light;}
 			}
 		}
-		.grid {@include center-horizontal(); border:1px solid $color-gold-footer;
-			* {@include font('Oswald','Light'); color:#0e0d0d; text-transform:uppercase; text-align:center;}
-			.row {border-bottom:1px solid $color-gold-footer;
+		.grid {@include center-horizontal(); border:1px solid $color-blue-dark;
+			* {@include font('Montserrat','Regular'); color:$color-blue-dark; text-transform:uppercase; text-align:center;}
+			.row {border-bottom:1px solid $color-blue-dark;
 				&:last-of-type {border-bottom:none;}
-				.box {border-right:1px solid $color-gold-footer;
+				.box {border-right:1px solid $color-blue-dark;
 					&:last-of-type {border-right:none;}
 				}
 			}
@@ -220,26 +220,25 @@ footer {
 		}
 	}
 	.lower {
-		& {background-color:$color-black;}
+		& {background-color:$color-blue-dark;}
 		.container {
 			& > * {position:relative; z-index:5;}
-			&:before {content:""; position:absolute; bottom:0px; right:0px; display:block; width:175px; height:175px; @include image-background($image-footer-bird,'bottom center','100% auto'); opacity:0.4; z-index:1;}
 		}
 		nav.legal {@include flexcolumn(); justify-content:center!important;
 			a {@include font('Montserrat','Regular'); color:#fff; text-transform:uppercase; transition:color .2s ease;
-				&:after {content:"|"; color:$color-gold-footer; padding:0 5px;}
+				&:after {content:"|"; color:$color-blue-light; padding:0 5px;}
 				&:last-of-type:after {display:none;}
-				&:hover {color:$color-gold-footer;}
+				&:hover {color:$color-blue-light;}
 			}
 		}
-		p.copyright {@include font('Montserrat','Regular'); color:$color-gold-footer; text-transform:uppercase; text-align:center;}
+		p.copyright {@include font('Montserrat','Regular'); color:#fff; text-transform:uppercase; text-align:center;}
 		nav.social {@include flexcolumn(); justify-content:center!important;
-			a {display:block; width:40px; height:40px; background-color:#2F2F2F; border-radius:50%; margin:0 10px; text-indent:-1000px; overflow:hidden; background-position:center center; background-repeat:no-repeat; background-size:20px 20px; transition:background-color .2s ease;
+			a {display:block; width:40px; height:40px; margin:0 20px; text-indent:-1000px; overflow:hidden; background-position:center center; background-repeat:no-repeat; background-size:100% 100%;
 				&.facebook {@include image-background-file($image-social-facebook);}
 				&.twitter {@include image-background-file($image-social-twitter);}
 				&.instagram {@include image-background-file($image-social-instagram);}
 				&.youtube {@include image-background-file($image-social-youtube);}
-				&:hover {background-color:#444444;}
+				&:hover {opacity:0.6;}
 			}
 		}
 	}
@@ -248,17 +247,17 @@ footer {
 		.container {width:100%!important; max-width:900px;}
 		.upper {
 			.container {padding:40px 0;}
-			img.logo {width:100px;}
+			img.logo {width:120px;}
 			nav.pages {margin:40px 0 20px;
 				a {margin:0 30px;}
 			}
-			.grid {width:100%; max-width:900px;
+			.grid {width:96%; max-width:900px;
 				.row {
 					&.r1 .box {width:33.33%; padding:15px;
-						p {@include font-size(18px,24px); letter-spacing:2px;}
+						p {@include font-size(15px,20px); letter-spacing:-0.03em;}
 					}
 					&:not(.r1) {padding:15px;
-						p {@include font-size(12px,16px); letter-spacing: 0.04em;}
+						p {@include font-size(11px,16px); letter-spacing: 0.04em;}
 					}
 				}
 			}
@@ -266,15 +265,16 @@ footer {
 		.lower {
 			.container {height:180px; padding:40px 0;}
 			nav.legal {
-				a {@include font-size(14px,20px);}
+				a {@include font-size(12px,20px);}
 			}
-			p.copyright {@include font-size(14px,20px);}
-			nav.social {margin-top:20px;}
+			p.copyright {@include font-size(12px,20px);}
+			nav.social {margin-top:30px;}
 		}
 	}
 	@include breakpoint('bp_768'){
 		.upper {
-			.grid .row.r1 .box p {@include font-size(14px,20px);}
+			img.logo {width:160px;}
+			.grid .row.r1 .box p {@include font-size(13px,20px); letter-spacing:-0.05em;}
 		}
 	}
 	@include breakpoint('<=bp_540'){
@@ -287,9 +287,9 @@ footer {
 			.grid {width:300px;
 				.row {
 					&.r1 {flex-direction:column; justify-content:flex-start; align-items:flex-start;
-						.box {width:100%; padding:10px; border-right:none; border-bottom:1px solid $color-gold;
+						.box {width:100%; padding:10px; border-right:none; border-bottom:1px solid $color-blue-dark;
 							&:last-of-type {border-bottom:none;}
-							p {@include font-size(14px,20px); letter-spacing:2px;}
+							p {@include font-size(14px,20px); letter-spacing:1px;}
 						}
 					}
 					&:not(.r1){padding:10px;
@@ -306,7 +306,9 @@ footer {
 				a {@include font-size(12px,18px);}
 			}
 			p.copyright {@include font-size(12px,18px);}
-			nav.social {margin-top:20px;}
+			nav.social {margin-top:20px;
+				a {width:30px; height:30px; margin:0 15px;}
+			}
 		}
 	}
 }

@@ -7,7 +7,7 @@
 			& > * {text-align:center; color:#060606;}
 			h1 {position:relative; @include font('Montserrat','Bold'); text-transform:uppercase;
 				span {@include font('Montserrat','Light');}
-				&:after {content:""; position:absolute; background-color:$color-gold;}
+				&:after {content:""; position:absolute; background-color:$color-blue-dark;}
 			}
 			p {@include font('Montserrat','Regular');}
 		}

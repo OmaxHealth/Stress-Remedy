@@ -2,7 +2,7 @@
 .page-faq {
 	main {
 		.container {text-align:center;
-			h1 {@include font('Montserrat','Bold'); color:$color-gold;}
+			h1 {@include font('Montserrat','Bold'); color:$color-blue-dark;}
 			.accordion-header {width:100%; margin:10px auto; padding:20px 25px; color:$color-black; background:$color-gray; 				cursor: pointer;
 				div {@include font('Montserrat','SemiBold'); text-align:left;}
 			}

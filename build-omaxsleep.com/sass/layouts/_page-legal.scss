@@ -1,6 +1,6 @@
 // Page: Legal Pages (Terms and Conditions, Privacy Policy)
 main#legal {	
-	h1 {@include font('Montserrat','Bold'); color:$color-gold; text-align:center; @include center-horizontal();}
+	h1 {@include font('Montserrat','Bold'); color:$color-blue-dark; text-align:center; @include center-horizontal();}
 	h2 {@include font('Montserrat','SemiBold'); text-transform:uppercase;}
 	h3 {@include font('Montserrat','Medium');}
 	p, li {@include font('Montserrat','Regular');
@@ -12,7 +12,7 @@ main#legal {
 	ol {margin-left:20px;
 		li {list-style-type:decimal;}
 	}
-	a {@include font('Montserrat','Regular'); color:$color-gold; text-decoration:underline;}
+	a {@include font('Montserrat','Regular'); color:$color-blue-dark; text-decoration:underline;}
 	
 	@include breakpoint('>=bp_768'){
 		h1 {margin-top:40px; margin-bottom:20px;}

@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="flexcolumn">
 				<div class="column left">
-					<h2>Enjoy Omax Sleep & Stress Remedy <strong>+ 2 FREE Gifts</strong> with entry into our VIP Membership</h2>
+					<h2>Enjoy Omax MAX SLEEP <strong>+ 2 FREE Gifts</strong> with entry into our VIP Membership</h2>
 				</div>
 				<div class="column right">
 					<picture class="product">
@@ -35,37 +35,37 @@
 			<div class="container">
 				<div class="flexbox">
 					<a class="box" href="<?php getOfferURL(1); ?>">
-						<div class="title">Monthly</div>
+						<div class="title">60-Day VIP</div>
 						<div class="price">
 							<span class="pt1">$</span><span class="pt2">39</span><span class="pt3">95</span><small>*</small>
 						</div>
 						<div class="ln1">Plus 2 Free Gifts</div>
 						<hr/>
-						<div class="ln2"><strong>$20</strong> Savings!</div>
+						<div class="ln2"><strong>20%</strong> Off Retail</div>
 						<div class="button"><span>Order Now</span></div>
-						<div class="ln3">Ships Free every 30 days. Cancel anytime.</div>
+						<div class="ln3">*1 bottle ships every 60-days Free shipping. Cancel anytime.</div>
 					</a>
 					<a class="box" href="<?php getOfferURL(2); ?>">
-						<div class="title">3 Month Supply</div>
+						<div class="title">90-Day VIP</div>
 						<div class="price">
 							<span class="pt1">$</span><span class="pt2">109</span><span class="pt3">95</span><small>*</small>
 						</div>
 						<div class="ln1">Plus 2 Free Gifts</div>
 						<hr/>
-						<div class="ln2"><strong>$70</strong> Savings!</div>
+						<div class="ln2"><strong>39%</strong> Off Retail</div>
 						<div class="button"><span>Order Now</span></div>
-						<div class="ln3">Ships Free every 90 days. Cancel anytime.</div>
+						<div class="ln3">*3 bottles ship every 90-days Free shipping. Cancel anytime.</div>
 					</a>
 					<a class="box" href="<?php getOfferURL(3); ?>">
 						<div class="title">One Time Delivery</div>
 						<div class="price">
-							<span class="pt1">$</span><span class="pt2">59</span><span class="pt3">95</span><small>&nbsp;</small>
+							<span class="pt1">$</span><span class="pt2">59</span><span class="pt3">95</span><small>*</small>
 						</div>
 						<div class="ln1">30-Day Supply</div>
 						<hr/>
 						<div class="ln2"></div>
 						<div class="button"><span>Order Now</span></div>
-						<div class="ln3">Ships Free. Re-order whenever you like.</div>
+						<div class="ln3">*1 bottle one-time shipment Free shipping. No Obligation.</div>
 					</a>					
 				</div>
 			</div>

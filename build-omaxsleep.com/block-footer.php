@@ -1,7 +1,7 @@
 <footer>
 	<div class="upper">
 		<div class="container">
-			<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/global/footer-logo.png" alt="Omax Health"/>
+			<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/global/logo-omax-health-blue.svg" alt="Omax Health"/>
 			<nav class="pages">
 				<a href="<?php bloginfo('url'); ?>/select-your-plan/">Shop</a>
 				<a href="<?php bloginfo('url'); ?>/reviews/">Reviews</a>
@@ -18,7 +18,7 @@
 					<p>* With enrollment into VIP auto-shipment program. 60-day money-back guarantee on first box only.<br/> Real user testimonials have been reimbursed for associated costs of filming.</p>
 				</div>
 				<div class="row r3">
-					<p>These statements have not been evaluated by the Food &amp; Drug Administration.<br/> This product is not intended to diagnose, treat, cure or prevent any disease. Consult your doctor before taking this or any dietary supplement.</p>
+					<p>These statements have not been evaluated by the Food &amp; Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Consult your doctor before taking this or any dietary supplement.</p>
 				</div>
 			</div>
 		</div>

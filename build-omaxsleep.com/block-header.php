@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta name="thumbnail" content="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png" />
+	<meta name="thumbnail" content="<?php bloginfo('template_directory'); ?>/images/home/single-box-HEMP.png?version=082319-2fjv" />
 
 	<?php if (!getHostingENV('local')){ ?>
 	<!-- Google Tag Manager -->
@@ -16,7 +16,7 @@
 	<title><?php wp_title(); ?></title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900|Oswald:200,300,400,500,700" />
-	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css',array()); ?>
+	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css?version=082319-2fjv',array()); ?>
 	<?php wp_head(); ?>
 
 	<?php if (is_page('reviews')){ ?>
